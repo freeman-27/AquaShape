@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Cube 3D</title>
+        <!-- styles -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- custom links -->
+        <!-- bootstrap local -->
+        <!-- <link rel="stylesheet" href="css/bootstrap-5.3.3/carousel.css">
+        <link rel="stylesheet" href="css/bootstrap-5.3.3/sticky-footer-navbar.css">
+        <link rel="stylesheet" href="css/bootstrap-5.3.3/headers.css">
+        <link rel="stylesheet" href="css/bootstrap-5.3.3/product.css"> -->
+</head>
+<body>
+    <main>
+        <div class="container-fuild">
+            <h1 class="bg-dark text-light text-center">Acuaqube 3D</h1>
+
+        </div>
+
+        <div class="container d-flex ">
+            <div class="text-center d-flex">
+                <img id="BoxCover" width="100%" src="aquacube_backview.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5;">
+                <div id="BoxBackConteiner" class="w-25 h-50 border border-2 border-black bg-transparent" style="border-style: dashed !important; z-index: 10; margin-left: 20%; position: absolute; align-self: center;">1</div>
+            </div>
+            <div class="d-flex flex-column justify-content-between align-items-center border-black border-2 border">
+                <img id="proto_1" class="dropContent" width="50%" src="proto_1.jpg" alt="" onmousedown="Refer_Element1()">
+                <img id="proto_2" class="dropContent" width="50%" src="proto_2.jpg" alt="" onmousedown="Refer_Element2()">
+                <img id="proto_3" class="dropContent" width="50%" src="proto_3.jpg" alt="" onmousedown="Refer_Element3()">
+                <!-- <img id="proto_4" class="dropContent" width="50%" src="proto_4.jpg" alt="" onmousedown="Refer_Element4()"> -->
+                <button id="proto_4" class="fs-3 dropContent" width="50%" alt="" onmousedown="Refer_Element4()" onclick="animateFunction_ALL()">+ item</button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.js"></script>
+<!-- custom scripts -->
+<script>
+    let E1 = document.getElementById("proto_1");
+    // let BoxConteiner = document.getElementById("BoxConteiner");
+    let BoxConteiner = document.getElementById("BoxBackConteiner");
+    // let InputProto1 = ImageBitmap;
+    let InputProto1 = document.createElement("img").src = "proto_1.jpg";
+    
+    ////inputs obgects:////
+    // let InputObject;
+    let inputObj_instance;
+    // InputObject.innerHTML = inputObj_instance;
+
+
+    // inputObj_instance = "proto_3.jpg"; 
+
+
+    //sourse for append:
+    let source_1 = "proto_1.jpg";
+    let source_2 = "proto_2.jpg";
+    let source_3 = "proto_3.jpg";
+
+    //default value
+    let check_1 = "proto_1.jpg";
+    let check_2 = "proto_2.jpg";
+    let check_3 = "proto_3.jpg";
+    let check_4 = "proto_4.jpg";
+
+    //result value
+    let refer_instance_1;
+    let refer_instance_2;
+    let refer_instance_3;
+    let refer_instance_4;
+
+    //new items vars
+    let item_1 = document.createElement('div');
+    let item_2 = document.createElement('div');
+    let item_3 = document.createElement('div');
+    // item_3.classList.add("border", "border-2", "bg-dark", "w-25");
+
+    //ImageItem Class
+    class Image_Item {
+        Comstructor(Name, Description, Source, Width, Height){
+            this.Name = Name;
+            this.Description = Name;
+            this.Source = Source;
+            this.Width = Width;
+            this.Height = Height;
+        }
+    }
+
+    var item_F4 = new Image_Item();
+    item_F4.Source = '<img id="" class="dropContent" width="10%" src="proto_4.jpg" alt="">';
+    let append_I4 = item_F4.Source;
+
+    function Refer_Element1(){
+        refer_instance_1 = "proto_1.jpg";
+        return refer_instance_1;
+    }
+    function Refer_Element2(){
+        refer_instance_2 = "proto_2.jpg";
+        return refer_instance_2;
+    }
+    function Refer_Element3(){
+        refer_instance_3 = "proto_3.jpg";
+        return refer_instance_3;
+    }
+    function Refer_Element4(){
+        refer_instance_4 = "proto_4.jpg";
+        return refer_instance_4;
+    }
+
+    function animateFunction_ALL(){
+        BoxConteiner.classList.add("border", "border-4");
+        if (refer_instance_1 === check_1){
+            inputObj_instance = source_1;
+            // BoxConteiner.innerHTML = '<img id="proto_1" class="dropContent" width="5%" src="'+ inputObj_instance +'" alt="">';
+            BoxConteiner.append(item_1);
+            item_1.innerHTML = '<img id="" class="dropContent" width="10%" src="'+ inputObj_instance +'" alt="">';
+        } else if (refer_instance_2 === check_2){
+            inputObj_instance = source_2;
+            // BoxConteiner.innerHTML = '<img id="proto_2" class="dropContent" width="5%" src="'+ inputObj_instance +'" alt="">';
+            BoxConteiner.append(item_2);
+            item_2.innerHTML = '<img id="" class="dropContent" width="10%" src="'+ inputObj_instance +'" alt="">';
+        } else if (refer_instance_3 === check_3){
+            inputObj_instance = source_3;
+            // BoxConteiner.innerHTML = '<img id="proto_3" class="dropContent" width="5%" src="'+ inputObj_instance +'" alt="">';
+            BoxConteiner.append(item_3);
+            item_3.innerHTML = '<img id="" class="dropContent" width="10%" src="'+ inputObj_instance +'" alt="">';
+        } else if (refer_instance_4 === check_4){
+            // BoxConteiner.append(item_F4.Source);
+            BoxConteiner.append(append_I4);
+        }
+    }
+
+</script>
+</body>
+</html>
