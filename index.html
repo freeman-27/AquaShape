@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.2">
     <title>Aqua Cube 3D</title>
         <!-- styles -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -24,12 +24,15 @@
             <div class="container d-flex d-inline-flex">
                 <div class="text-center d-flex">
                     <div id="LightSource_Element" class="bg-black border-2 border-light rounded-circle" style="width: 0px; block-size: 0px; position: absolute; left: 50%; top: 20%; z-index: 0;"></div>
-                    <img id="BoxCover" width="115%" src="img/aquacube_backview.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5;">
-                    <div id="BoxBackConteiner" class="d-flex flex-wrap border border-2 border-black bg-transparent" style="width: 40%; block-size: 70%; border-style: dashed !important; z-index: 1005; margin-left: 20%; position: absolute; align-self: center;">1</div>
+                    <!-- <img id="BoxCover" width="115%" src="img/aquacube_backview.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5;"> -->
+                    <img id="BoxCover" width="80%" src="img/aquacube_back_part_view(80per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5; position: absolute;">
+                    <img id="BoxCover" width="80%" src="img/aquacube_middlecontentview(100per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 30005; opacity: 0.5; position: absolute;">
+                    <img id="BoxCover" width="80%" src="img/aquacube_frontview(10per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 90005; opacity: 0.8; position: absolute;">
+                    <div id="BoxBackConteiner" class="d-flex flex-wrap border border-1 border-secondary bg-transparent" style="width: 40%; block-size: 70%; border-style: dashed !important; z-index: 50005; margin-left: 20%; position: absolute; align-self: center; top:20%;">1</div>
                     <div id="testItem"><img id="proto_4" class="mb-4 dropContent" width="50px" src="proto_4.jpg" alt="" style="position: absolute; left: 50px;"></div>
                 </div>
             </div>
-            <div class="d-flex flex-column justify-content-between align-items-center border-black border-2 border bg-secondary"  style="z-index: 20005; width: 120px; block-size: 95% !important; position: absolute; right: 0;">
+            <div class="d-flex flex-column justify-content-between align-items-center border-black border-2 border bg-secondary"  style="z-index: 20005; width: 120px; block-size: 95% !important; position: absolute; right: 0; top:5%;">
                 <!-- <img id="proto_1" class="mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="proto_1.jpg" alt="" onmousedown="Refer_Element1()"> -->
                 <img id="proto_2" class="mt-4 mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="img/prototype_3.png" alt="" onmousedown="Refer_Element2()">
                 <img id="proto_3" class="mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="img/proto_3.jpg" alt="" onmousedown="Refer_Element3()">
@@ -37,12 +40,12 @@
                 <img id="proto_4" class="mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="img/barbus_transparent.png" alt="" onmousedown="Refer_Element4()">
                 <img id="proto_4" class="mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="img/orange_discus_fish_transparent.png" alt="" onmousedown="Refer_Element4()">
                 <button id="AddSmItemBtn" class="mb-1 btn btn-success rounded-circle border-1 border-light" alt="" onclick="Add_ItemSmall_01()" style="width: 100px; height: 100px;">+ 1 Small</button>
-                <button id="" class="mb-1 btn rounded-circle border-1 border-light" width="50px" alt="" onclick="AddItemFull_Image1()">+1 Full</button>
-                <button id="" class="mb-1 btn rounded-circle border-1 border-light" width="50px" alt="" onclick="AddRandom()">+ R5 items</button>
+                <button id="" class="mb-1 btn border-1 border-light" width="50px" alt="" onclick="AddItemFull_Image1()">+1 Full</button>
+                <button id="" class="mb-1 btn border-1 border-light" width="50px" alt="" onclick="AddRandom()">+ R5 items</button>
                 <button id="" class="mb-1 btn bg-primary text-light border-1 border-light" width="50px" alt="" onclick="AddBubbles(); BubbleGetSize()">bubbles</button>
-                <button id="clear_items" class="mb-1 btn btn-warning border-1 border-light" width="50px" alt="" onclick="RemoveItems()">Clear items</button>
-                <button id="Light_Switch" class="btn btn-dark text-light border-1 border-light" width="50px" onclick="Switch_Light()">Lights On</button>
                 <button id="Sound_Btn" class="btn btn-primary text-light border-1 border-light" width="50px" onclick="TurnSound(); Animate_Images()">Play Sound</button>
+                <button id="Light_Switch" class="btn btn-dark text-light border-1 border-light" width="50px" onclick="Switch_Light()">Lights On</button>
+                <button id="clear_items" class="mb-1 btn btn-warning border-1 border-light" width="50px" alt="" onclick="RemoveItems()">Clear items</button>
             </div>
         </div>
         <div></div>
