@@ -1,0 +1,186 @@
+:root{
+    --SetX: range: "10px";
+}
+.LightOn{
+    /* box-shadow: 0 0px 24px 32px rgba(166, 255, 0, 0.76), 0 0px 60px 65px rgba(255, 255, 255, 0.4); */
+    box-shadow: 0 0px 240px 320px rgba(166, 255, 0, 0.76), 0 0px 600px 750px rgba(255, 255, 255, 0.4);
+}
+
+.itemsAnimation_V1{
+    /*type 1    ============    */
+    /* animation: MoveImageItems 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    position: absolute;
+    transition-duration: 5s; */
+
+    /*type 2    ============    */
+    animation-name: MoveImageItems_V1;
+    animation-duration: 240s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    position: absolute;
+    /* border-color: cyan !important; */
+
+}
+
+@keyframes MoveImageItems_V1{
+    /*for type 1   ============    */
+    /* from{left: 50px;
+        top: 50px;
+    }
+    to{right: 400px;
+        bottom: 400px;
+    } */
+
+    /*for type 2    ============    */
+     0%{left: 50px; top: 50px;}
+     5%{left: 100px; top: 400px;}  
+    10%{left: 200px; top: 200px;}  
+    15%{left: 300px; top: 50px;}  
+    25%{left: 400px; top: 400px;}
+    50%{left: 450px; top: 50px;}  
+    75%{left: 300px; top: 400px;} 
+    85%{left: 200px; top: 200px;} 
+    95%{left: 100px; top: 400px;} 
+    100%{left: 50px; top: 50px;}  
+    /* 100%{right: 400px;
+        bottom: 400px;} */
+}
+.itemsAnimation_V2{
+    animation-name: MoveImageItems_V2;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards; /* ===================== */
+    animation-direction: alternate;
+    position: absolute;
+    /* border-color: chartreuse !important; */
+
+}
+@keyframes MoveImageItems_V2{
+    0%{left:   500px;  top:   500px ;}  /*mod */
+    5%{left:   400px;  top:  100px;} 
+    /* 10%{left:  200px;  top:  200px;}  */
+    15%{left:  400px;  top:  300px;} 
+    25%{left:  50px;   top:  450px;}  
+    50%{left:  400px;  top:  400px;}
+    /* 75%{left:  50px;   top:  300px;}   */
+    85%{left:  200px;  top:  200px;}  
+    95%{left:  400px;  top:  100px;}  
+    100%{left: 50px;  top:   50px}
+}
+
+.itemsAnimation_V3{
+    animation-name: MoveImageItems_V3;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards; /* ===================== */
+    animation-direction: alternate;
+    position: absolute;
+    /* border-style: dashed !important; */
+    /* border-color: orange !important; */
+}
+@keyframes MoveImageItems_V3{
+    0%{left:   350px;  top:   350px ;}   /*mod */
+    5%{left:  50px;  top:  50px;} 
+    10%{left:  200px;  top:  200px;} 
+    15%{left:  400px;  top:  300px;} 
+    /* 25%{left:  50px;   top:  450px;}   */
+    50%{left:  400px;  top:  400px;}
+    75%{left:  50px;   top:  300px;}  
+    /* 85%{left:  200px;  top:  200px;}   */
+    95%{left:  400px;  top:  100px;}  
+    100%{left: 400px;  top:   100x}
+}
+.itemsAnimation_V4{
+    animation-name: MoveImageItems_V4;
+    animation-duration: 360s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards; /* ===================== */
+    animation-direction: alternate;
+    position: absolute;
+    /* border-style: dashed !important; */
+    /* border-color: purple !important; */
+}
+@keyframes MoveImageItems_V4{
+    0%{left:   350px;  top:   350px ;}   /*mod */
+    5%{left:  50px;  top:  50px;} 
+    10%{left:  200px;  top:  200px;} 
+    15%{left:  400px;  top:  300px;} 
+    /* 25%{left:  50px;   top:  450px;}   */
+    50%{left:  400px;  top:  400px;}
+    75%{left:  50px;   top:  300px;}  
+    /* 85%{left:  200px;  top:  200px;}   */
+    95%{left:  400px;  top:  100px;}  
+    100%{left: 400px;  top:   100x}
+}
+.itemsAnimation_V5{
+    animation-name: MoveImageItems_V5;
+    animation-duration: 360s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards; /* ===================== */
+    animation-direction: alternate;
+    position: absolute;
+    /* border-style: dashed !important; */
+    /* border-color: purple !important; */
+}
+@keyframes MoveImageItems_V5{
+    0%{left:   500px;  top:   350px ;}   /*mod */
+    5%{left:  50px;  top:  50px;} 
+    10%{left:  200px;  top:  200px;} 
+    15%{left:  400px;  top:  300px;} 
+    /* 25%{left:  50px;   top:  450px;}   */
+    50%{left:  400px;  top:  400px;}
+    75%{left:  50px;   top:  300px;}  
+    /* 85%{left:  200px;  top:  200px;}   */
+    95%{left:  400px;  top:  100px;}  
+    100%{left: 500px;  top:   200x}
+}
+
+.bubblesAnimation{
+    animation-name: MoveImageBubbles;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards; /* ===================== */
+    /* animation-direction: alternate; */
+    position: absolute;
+    /* border-style: dashed !important; */
+    /* border-color: purple !important; */
+}
+@keyframes MoveImageBubbles{
+    0%{left:   50px;  top:   500px ;}
+   10%{left:   55px;  top:   450px ;}
+   20%{left:   50px;  top:   305px ;}
+   30%{left:   55px;  top:   275px ;}
+   40%{left:   50px;  top:   250px ;}
+   50%{left:   55px;  top:   215px ;}
+   60%{left:   50px;  top:   180px ;}
+   70%{left:   55px;  top:   145px ;}
+   80%{left:   50px;  top:   110px ;}
+   90%{left:   50px;  top:   85px ;}
+  100%{left:   50px;  top:   50px ;}
+}
+.bubblesAnimation_2{
+    animation-name: MoveImageBubbles_2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards; /* ===================== */
+    /* animation-direction: alternate; */
+    position: absolute;
+    /* border-style: dashed !important; */
+    /* border-color: purple !important; */
+}
+@keyframes MoveImageBubbles_2{
+    0%{left:   50px;  top:   480px ;}
+   10%{left:   55px;  top:   430px ;}
+   20%{left:   50px;  top:   405px ;}
+   30%{left:   55px;  top:   315px ;}
+   40%{left:   50px;  top:   270px ;}
+   50%{left:   55px;  top:   250px ;}
+   60%{left:   50px;  top:   200px ;}
+   70%{left:   55px;  top:   145px ;}
+   80%{left:   50px;  top:   120px ;}
+   90%{left:   50px;  top:   100px ;}
+  100%{left:   50px;  top:   75px ;}
+}
