@@ -30,11 +30,11 @@
             </div>
             <div class="d-flex flex-column justify-content-between align-items-center border-black border-2 border bg-secondary"  style="z-index: 20005; width: 5%; block-size: 95% !important; position: absolute; right: 0;">
                 <img id="proto_1" class="mb-4 dropContent" width="50px" src="proto_1.jpg" alt="" onmousedown="Refer_Element1()">
-                <img id="proto_2" class="mb-4 dropContent" width="50px" src="proto_2.jpg" alt="" onmousedown="Refer_Element2()">
-                <img id="proto_3" class="mb-4 dropContent" width="50px" src="proto_3.jpg" alt="" onmousedown="Refer_Element3()">
-                <img id="proto_4" class="mb-4 dropContent" width="50px" src="proto_4.jpg" alt="" onmousedown="Refer_Element4()">
-                <img id="proto_4" class="mb-4 dropContent" width="50px" src="proto_4.jpg" alt="" onmousedown="Refer_Element4()">
-                <img id="proto_4" class="mb-4 dropContent" width="50px" src="proto_4.jpg" alt="" onmousedown="Refer_Element4()">
+                <img id="proto_2" class="mb-4 dropContent" width="50px" src="img/prototype_3.png" alt="" onmousedown="Refer_Element2()">
+                <img id="proto_3" class="mb-4 dropContent" width="50px" src="img/proto_3.jpg" alt="" onmousedown="Refer_Element3()">
+                <img id="proto_4" class="mb-4 dropContent" width="50px" src="img/bannerfish_transparent.png" alt="" onmousedown="Refer_Element4()">
+                <img id="proto_4" class="mb-4 dropContent" width="50px" src="img/barbus_transparent.png" alt="" onmousedown="Refer_Element4()">
+                <img id="proto_4" class="mb-4 dropContent" width="50px" src="img/orange_discus_fish_transparent.png" alt="" onmousedown="Refer_Element4()">
                 <button id="AddSmItemBtn" class="mb-1 btn btn-success" width="50px" alt="" onclick="Add_ItemSmall_01()">+ 1 Small</button>
                 <button id="" class="mb-1 btn" width="50px" alt="" onclick="AddItemFull_Image1()">+1 Full</button>
                 <button id="" class="mb-1 btn" width="50px" alt="" onclick="AddRandom()">+ R5 items</button>
@@ -69,16 +69,23 @@
 
 
     //sourse for append:
-    let source_1 = "proto_1.jpg";
-    let source_2 = "proto_2.jpg";
-    let source_3 = "proto_3.jpg";
-    let source_4 = "proto_4.jpg";
+    let source_1 = "img/bannerfish_transparent.png";
+    let source_2 = "img/orange_discus_fish_transparent.png";
+    let source_3 = "img/prototype_3.png";
+    let source_4 = "img/barbus_transparent.png";
+    let sourceArr = [
+    source_1,
+    source_2,
+    source_3,
+    source_4
+    ];
+    let Rand_index = 0;
 
     //default value
-    let check_1 = "proto_1.jpg";
-    let check_2 = "proto_2.jpg";
-    let check_3 = "proto_3.jpg";
-    let check_4 = "proto_4.jpg";
+    let check_1 = "img/bannerfish_transparent.png";
+    let check_2 = "img/orange_discus_fish_transparent.png";
+    let check_3 = "img/prototype_3.png";
+    let check_4 = "img/barbus_transparent.png";
 
     //result value
     let refer_instance_1;
@@ -109,19 +116,19 @@
     let append_I4 = item_F4.Source;
 
     function Refer_Element1(){
-        refer_instance_1 = "proto_1.jpg";
+        refer_instance_1 = "img/bannerfish_transparent.png";
         return refer_instance_1;
     }
     function Refer_Element2(){
-        refer_instance_2 = "proto_2.jpg";
+        refer_instance_2 = "img/bannerfish_transparent.png";
         return refer_instance_2;
     }
     function Refer_Element3(){
-        refer_instance_3 = "proto_3.jpg";
+        refer_instance_3 = "img/proto_3.jpg";
         return refer_instance_3;
     }
     function Refer_Element4(){
-        refer_instance_4 = "proto_4.jpg";
+        refer_instance_4 = "img/barbus_transparent.png";
         return refer_instance_4;
     }
 
@@ -200,6 +207,17 @@
     let RoolElement = document.getElementById("AddSmItemBtn");
     let set_X = Math.floor(Math.random() * 500) + 10;
     let set_Y = Math.floor(Math.random() * 400) + 50;
+
+    function SetXY(){
+        let incr_X = Math.floor(Math.random() * 100) + 50; // incr from 50to100
+        let incr_Y = Math.floor(Math.random() * 100) + 50;  // incr from 50to100
+        set_X += Math.floor(Math.random() * 500) + 10;
+        set_Y += Math.floor(Math.random() * 400) + 50;
+        set_X += incr_X;
+        set_Y += incr_Y; 
+        return set_X, set_Y
+    }
+
     function Add_ItemSmall_01(){
         
         let input_instance_from_src = source_2;
@@ -223,15 +241,18 @@
         var CreateDivElement = document.createElement('div');
         var CreateBtnElement = document.createElement('button');
         var CreateImageElement = document.createElement('img');
-        var AnimationNumber = Math.floor(Math.random() * 2) + 1; //number from 1 to 2
+        var AnimationNumber = Math.floor(Math.random() * 3) + 1; //number from 1 to 3
+        Rand_index = Math.floor(Math.random() * 4) + 1; //number from 1 to 4
         // CreateNewElement.classList.add("btn", "btn-success");
-        CreateDivElement.classList.add("bg-success", "rounded-circle", "AnimatedImageBoxes", "itemsAnimation_V" + AnimationNumber);
+        // set_X = Math.floor(Math.random() * 500) + 10;
+        // set_Y = Math.floor(Math.random() * 400) + 50;
+        SetXY();
+        CreateDivElement.classList.add("bg-transparent", "rounded-circle", "AnimatedImageBoxes", "itemsAnimation_V" + AnimationNumber);
         CreateDivElement.setAttribute("style", "border: 2px solid red; width:75px !important; block-size: 75px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
         // set_X += 50;
         // set_Y += 50;
         //randomise X,Y:
-        set_X = Math.floor(Math.random() * 500) + 10;
-        set_Y = Math.floor(Math.random() * 400) + 50;
+
 
         // position: absolute; left:"'+ set_X +'"px; top:"'+ set_Y + '"px;"'
         // CreateDivElement.setAttribute("style", "");
@@ -239,7 +260,8 @@
         CreateBtnElement.classList.add("btn", "btn-primary");
         
         CreateImageElement.setAttribute("class", "rounded-circle");
-        CreateImageElement.setAttribute("src", "proto_4.jpg");
+        
+        CreateImageElement.setAttribute("src", sourceArr[Rand_index]);
         CreateImageElement.setAttribute("width", "70px");
         
         CreateDivElement.appendChild(CreateImageElement);

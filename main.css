@@ -47,14 +47,6 @@
         bottom: 400px;} */
 }
 .itemsAnimation_V2{
-    /*type 1    ============    */
-    /* animation: MoveImageItems 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    position: absolute;
-    transition-duration: 5s; */
-
-    /*type 2    ============    */
     animation-name: MoveImageItems_V2;
     animation-duration: 50s;
     animation-iteration-count: infinite;
@@ -65,16 +57,7 @@
 
 }
 @keyframes MoveImageItems_V2{
-    /*for type 1   ============    */
-    /* from{left: 50px;
-        top: 50px;
-    }
-    to{right: 400px;
-        bottom: 400px;
-    } */
-
-    /*for type 2    ============    */
-    0%{left:   50px;  top:   50px ;}  
+    0%{left:   50px;  top:   400px ;}  /*mod */
     5%{left:   400px;  top:  100px;} 
     10%{left:  200px;  top:  200px;} 
     15%{left:  400px;  top:  300px;} 
@@ -84,7 +67,27 @@
     85%{left:  200px;  top:  200px;}  
     95%{left:  400px;  top:  100px;}  
     100%{left: 50px;  top:   50px}
+}
 
-    /* 100%{right: 400px;
-        bottom: 400px;} */
+.itemsAnimation_V3{
+    animation-name: MoveImageItems_V3;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards; /* ===================== */
+    animation-direction: reverse;
+    position: absolute;
+    border-style: dashed !important;
+    border-color: orange !important;
+}
+@keyframes MoveImageItems_V3{
+    0%{left:   350px;  top:   350px ;}   /*mod */
+    5%{left:  50px;  top:  50px;} 
+    10%{left:  200px;  top:  200px;} 
+    15%{left:  400px;  top:  300px;} 
+    25%{left:  50px;   top:  450px;}  
+    50%{left:  400px;  top:  400px;}
+    75%{left:  50px;   top:  300px;}  
+    85%{left:  200px;  top:  200px;}  
+    95%{left:  400px;  top:  100px;}  
+    100%{left: 50px;  top:   50px}
 }
