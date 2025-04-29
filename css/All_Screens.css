@@ -1,0 +1,21 @@
+/*for mobile and desktop*/
+#Sound_Btn img, 
+#Sound_Btn_Mobile img,
+#AddBubbles_Btn img{
+    width: 30px;
+}
+
+#Light_Switch img, 
+#Light_Switch_Mobile img, 
+#AddBubbles_Btn_Mobile img{
+    width: 30px;
+}
+
+#Sound_Btn span, 
+#Sound_Btn_Mobile span,
+#AddBubbles_Btn span,
+#Light_Switch span, 
+#Light_Switch_Mobile span, 
+#AddBubbles_Btn_Mobile span{
+    display: none;
+}
