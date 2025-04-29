@@ -1,0 +1,145 @@
+
+
+@media screen and (min-width: 100px) and (max-width: 800px) {
+    body{
+        /* border: 2px solid green !important; */
+    }
+
+    #BoxBackConteiner{
+        position: absolute;
+        left: 2% !important;
+        right: 2% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        width: clamp(90%, 100vw, 95%)!important;
+        block-size: clamp(15em, 75vw, 20em)!important;
+        /*border: 1px dashed green !important;  /* --------------------------------- */
+        border: none !important;
+    }
+    #BoxCoverBack, #BoxCoverMiddle, #BoxCoverFront {
+        position: absolute;
+        left: -25% !important;
+        right: auto !important;
+        padding: 0 !important;
+        width: clamp(150%, 100vw, 200%)!important;
+        block-size: clamp(5em, 100vw, 30em)!important;
+        /*border: 2px solid yellow !important; /* --------------------------------- */
+    }
+    #Items_Panel{
+        display: flex !important;
+        /* flex-direction: row !important; */
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        position: fixed !important;
+        /* border: 2px dashed red !important; */ /* --------------------------------- */
+        position: absolute;
+        left: 0 !important;
+        bottom: 200px !important; 
+        width: 80% !important; 
+        block-size: 200px !important;
+    }
+    #Buttons_Panel{
+        display: flex !important;
+        /* flex-direction: row !important; */
+        flex-wrap: wrap !important;
+        /* position: fixed !important; */
+        position: absolute !important;
+        width: 1em !important;
+        /* justify-content: space-between !important; */
+        align-items: center;
+        padding: 0 !important;
+        /* border: 2px dashed violet !important; */ /* --------------------------------- */
+        left: 0 !important;
+        bottom: 0 !important; 
+        width: 80% !important; 
+        block-size: 100px !important;
+    }
+   .btnItmem{
+        /* margin: 0 auto 0 0.5% !important; */
+    }
+    .btnItmemImage{
+        /* display: none; */
+    }
+    #itemAdd_3, #clear_items{
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    #AddSmItemBtn{
+        position: absolute;
+        width: 100px !important;
+        block-size: 100px !important;
+        bottom: 275px !important;
+        right: 15% !important;
+        /* right: auto !important; */
+    }
+    .btnItmem{
+        width: 3em !important;
+        height: 3em !important;
+        font-size: small;
+        margin: 0 auto 0 5% !important;
+
+    }
+    #itemAdd_3, #itemAdd_4, #itemAdd_5, #itemAdd_6{
+        margin: 0 auto 0 5% !important;
+        padding: 0 !important;
+    }
+    #clear_items{
+        position: absolute;
+        border-radius: 50%;
+        width: 100px !important;
+        block-size: 100px !important;
+        bottom: 275px !important;
+        left: 15% !important;
+        right: auto !important;
+        background-color: darkred;
+    }
+
+    /*Moblie  CustomButtons */
+#Sound_Btn, #Light_Switch{
+    /* background-image: url('img/sound_on.png'); background-size: cover, cover; */
+    padding: 0;
+}
+
+#Sound_Btn span, #Light_Switch span{
+    color: green;
+    display: none;
+}
+
+}
+
+/*for mobile and desktop*/
+#Sound_Btn img{
+    width: 30px;
+}
+#Light_Switch img{
+    width: 30px;
+}
+
+@media (hover: hover) {
+    /* ... */
+
+}
+
+@media (hover: none) {
+    /* ... */
+
+}
+
+
+
+/* //// Animation mobile */
+.itemsAnimation_V1_Mobile, .itemsAnimation_V2_Mobile, .itemsAnimation_V3, .itemsAnimation_V4_Mobile_, .itemsAnimation_V5_Mobile_{
+    border: 5px dotted rgb(253, 178, 178) !important;
+    animation-name: MoveImageItems_mobile;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    position: absolute;
+}
+
+@keyframes MoveImageItems_mobile{
+     0%{left: clamp(70px, 5vw, 75px); top: clamp(70px, 5vw, 75px); transform: scaleX(1);}    /*mod */
+    25%{left: clamp(100px, 5vw, 105px); top: clamp(100px, 5vw, 105px); transform: scaleX(1);}    /*mod */
+    75%{left: clamp(110px, 5vw, 200px); top: clamp(110px, 5vw, 200px); transform: scaleX(1);}    /*mod */
+    100%{left: clamp(205px, 5vw, 300px); top: clamp(205px, 5vw, 300px); transform: scaleX(1);}    /*mod */
+}

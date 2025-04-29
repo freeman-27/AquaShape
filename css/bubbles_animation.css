@@ -1,0 +1,48 @@
+
+.bubblesAnimation{
+    border-color:blueviolet !important;
+    animation-name: MoveImageBubbles;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards; /* ===================== */
+    /* animation-direction: alternate; */
+    position: absolute;
+    /* border-style: dashed !important; */
+    /* border-color: purple !important; */
+}
+@keyframes MoveImageBubbles{
+    0%{left:   50px;  top:   500px ;}
+   10%{left:   55px;  top:   450px ;}
+   20%{left:   50px;  top:   305px ;}
+   30%{left:   55px;  top:   275px ;}
+   40%{left:   50px;  top:   250px ;}
+   50%{left:   55px;  top:   215px ;}
+   60%{left:   50px;  top:   180px ;}
+   70%{left:   55px;  top:   145px ;}
+   80%{left:   50px;  top:   110px ;}
+   90%{left:   50px;  top:   85px ;}
+  100%{left:   50px;  top:   50px ;}
+}
+.bubblesAnimation_2{
+    animation-name: MoveImageBubbles_2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards; /* ===================== */
+    /* animation-direction: alternate; */
+    position: absolute;
+    /* border-style: dashed !important; */
+    /* border-color: purple !important; */
+}
+@keyframes MoveImageBubbles_2{
+    0%{left:   50px;  top:   480px ;}
+   10%{left:   55px;  top:   430px ;}
+   20%{left:   50px;  top:   405px ;}
+   30%{left:   55px;  top:   315px ;}
+   40%{left:   50px;  top:   270px ;}
+   50%{left:   55px;  top:   250px ;}
+   60%{left:   50px;  top:   200px ;}
+   70%{left:   55px;  top:   145px ;}
+   80%{left:   50px;  top:   120px ;}
+   90%{left:   50px;  top:   100px ;}
+  100%{left:   50px;  top:   75px ;}
+}

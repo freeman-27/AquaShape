@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aqua Cube 3D</title>
         <!-- styles -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -12,40 +12,54 @@
         <link rel="stylesheet" href="css/bootstrap-5.3.3/sticky-footer-navbar.css">
         <link rel="stylesheet" href="css/bootstrap-5.3.3/headers.css">
         <link rel="stylesheet" href="css/bootstrap-5.3.3/product.css"> -->
-        <!-- <link rel="stylesheet" href="css/main.css"> -->
-        <!-- <link rel="stylesheet" href="css/animation_stylesheet.css"> -->
+        <!--===== CUSTOM CSS -->
+        <!-- <link rel="stylesheet" href="css/main_desktop.css"> -->
+        <!-- <link rel="stylesheet" href="css/main_mobile.css"> -->
+        <!-- <link rel="stylesheet" href="css/animation_stylesheet_desktop.css"> -->
+        <link rel="stylesheet" href="css/R_animation_stylesheet_mobile.css">
+        <link rel="stylesheet" href="css/bubbles_animation.css">
+
+    <link rel="icon" href="img/aquacube_content_image_r2.ico" type="image/x-icon"/>
+
 </head>
-<body class="bg-dark" onload ="Connect_CSS()">
+<body id="bodyItem" class="bg-dark" onload ="Connect_CSS_and_mob();" > <!-- onresize="CheckWindowSize()" style=""-->
     <main>
-        <div class="container-fuild" style="z-index: 20005;">
-            <h1 class="bg-black text-light text-center">AcuaCube 3D</h1>
+        <canvas style="border: 2px solid red ; z-index: -1; position: absolute; background: url('img/waves.png'); opacity: 0.5; width: 98%; height: 98%;"></canvas>
+        <div class="container-fuild" style="z-index: 250005 !important;">
+            <h1 class="bg-black text-light text-center" >AcuaCube 3D</h1>
+            <a class="ms-5 btn btn-primary text-black border-4 border-bottom" role="button" href="https://wmit.online">Home</a>
+            <a class="ms-5 btn btn-primary text-black border-4 border-bottom" role="button" type="button" data-bs-toggle="collapse" data-bs-target="#Items_Panel" aria-expanded="false" aria-controls="Items_Panel">menu</a>
+            <div id="WarningBox" class="mt-5 bg-success d-none fs-3" style="block-size: 500px;">123</div>
         </div>
         <div class="d-flex justify-content-between align-items-center">
-            <div class="container d-flex d-inline-flex">
+            <div id="AppMainContainer" class="container d-flex d-inline-flex">
                 <div class="text-center d-flex">
                     <div id="LightSource_Element" class="bg-black border-2 border-light rounded-circle" style="width: 0px; block-size: 0px; position: absolute; left: 50%; top: 20%; z-index: 0;"></div>
                     <!-- <img id="BoxCover" width="115%" src="img/aquacube_backview.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5;"> -->
-                    <img id="BoxCover" width="80%" src="img/aquacube_back_part_view(80per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5; position: absolute;">
-                    <img id="BoxCover" width="80%" src="img/aquacube_middlecontentview(100per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 30005; opacity: 0.5; position: absolute;">
-                    <img id="BoxCover" width="80%" src="img/aquacube_frontview(10per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 90005; opacity: 0.8; position: absolute;">
-                    <div id="BoxBackConteiner" class="d-flex flex-wrap border border-1 border-secondary bg-transparent" style="width: 40%; block-size: 70%; border-style: dashed !important; z-index: 50005; margin-left: 20%; position: absolute; align-self: center; top:20%;">1</div>
-                    <div id="testItem"><img id="proto_4" class="mb-4 dropContent" width="50px" src="proto_4.jpg" alt="" style="position: absolute; left: 50px;"></div>
+                    <img id="BoxCoverBack" width="" src="img/aquacube_back_part_view(80per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5; position: absolute;">
+                    <img id="BoxCoverMiddle" width="" src="img/aquacube_middlecontentview(100per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 30005; opacity: 0.5; position: absolute;">
+                    <img id="BoxCoverFront" width="" src="img/aquacube_frontview(10per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 90005; opacity: 0.8; position: absolute;">
+                    <div id="BoxBackConteiner" class="d-flex flex-wrap border border-1 border-secondary bg-transparent" style="width: 35%; block-size: 60%; border-style: dashed; z-index: 50005; margin-left: 20%; position: absolute; align-self: center; top:20%;">1</div>
+                    <div id="testItem"><img id="" class="mb-4 dropContent" width="50px" src="img/aquacube_content_image_r2.ico" alt="" style="position: absolute; left: 50px; top:0;"></div>
                 </div>
             </div>
-            <div class="d-flex flex-column justify-content-between align-items-center border-black border-2 border bg-secondary"  style="z-index: 20005; width: 120px; block-size: 95% !important; position: absolute; right: 0; top:5%;">
+            <div id="Items_Panel" class="d-flex flex-column justify-content-between align-items-center border-black border-2 border bg-secondary"  style="z-index: 20005; width: 120px; block-size: 95%; position: absolute; right: 0; top:5%;">
                 <!-- <img id="proto_1" class="mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="proto_1.jpg" alt="" onmousedown="Refer_Element1()"> -->
-                <img id="proto_2" class="mt-4 mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="img/prototype_3.png" alt="" onmousedown="Refer_Element2()">
-                <img id="proto_3" class="mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="img/proto_3.jpg" alt="" onmousedown="Refer_Element3()">
-                <img id="proto_4" class="mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="img/BannerfishTransparent.png" alt="" onmousedown="Refer_Element4()">
-                <img id="proto_4" class="mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="img/barbus_transparent.png" alt="" onmousedown="Refer_Element4()">
-                <img id="proto_4" class="mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="img/orange_discus_fish_transparent.png" alt="" onmousedown="Refer_Element4()">
-                <button id="AddSmItemBtn" class="mb-1 btn btn-success rounded-circle border-1 border-light" alt="" onclick="Add_ItemSmall_01()" style="width: 100px; height: 100px;">+ 1 Small</button>
-                <button id="" class="mb-1 btn border-1 border-light" width="50px" alt="" onclick="AddItemFull_Image1()">+1 Full</button>
-                <button id="" class="mb-1 btn border-1 border-light" width="50px" alt="" onclick="AddRandom()">+ R5 items</button>
-                <button id="" class="mb-1 btn bg-primary text-light border-1 border-light" width="50px" alt="" onclick="AddBubbles(); BubbleGetSize()">bubbles</button>
-                <button id="Sound_Btn" class="btn btn-primary text-light border-1 border-light" width="50px" onclick="TurnSound(); Animate_Images()">Play Sound</button>
-                <button id="Light_Switch" class="btn btn-dark text-light border-1 border-light" width="50px" onclick="Switch_Light()">Lights On</button>
-                <button id="clear_items" class="mb-1 btn btn-warning border-1 border-light" width="50px" alt="" onclick="RemoveItems()">Clear items</button>
+                <!-- <img id="itemAdd_2" class="mt-4 mb-4 dropContent btnItmemImage" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="img/prototype_3.png" alt="" onmousedown="Refer_Element2()"> -->
+                <img id="itemAdd_3" class="mt-4 mb-4 dropContent btnItmemImage" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid white; border-radius:25px; height:50px;" width="50px" src="img/prototype_3.png" alt="" onmousedown="AddItem_T1()">
+                <img id="itemAdd_4" class="mb-4 dropContent btnItmemImage" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid white; border-radius:25px; height:50px;" width="50px" src="img/BannerfishTransparent.png" alt="" onmousedown="AddItem_T2()">
+                <img id="itemAdd_5" class="mb-4 dropContent btnItmemImage" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid white; border-radius:25px; height:50px;" width="50px" src="img/barbus_transparent.png" alt="" onmousedown="AddItem_T3()">
+                <img id="itemAdd_6" class="mb-4 dropContent btnItmemImage" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid white; border-radius:25px; height:50px;" width="50px" src="img/orange_discus_fish_transparent.png" alt="" onclick="AddItem_T4()">
+                <div id="Buttons_Panel" class="d-flex flex-column justify-content-between align-items-center">
+                    <!-- <button id="" class="btnItmem mb-1 btn text-light border-1 border-light" width="50px" alt="" onclick="AddItemFull_Image1()">+1 Full</button> -->
+                    <!-- <button id="" class="btnItmem mb-1 btn text-light border-1 border-light" width="50px" alt="" onclick="Add_4_Random()">+ R5 items</button> -->
+                    <button id="" class="btnItmem mb-1 btn bg-primary text-light border-1 border-light" width="50px" alt="" onclick="AddBubbles(); BubbleGetSize()">bubbles</button>
+                    <button id="Sound_Btn" class="btnItmem btn btn-primarytext-light border-1 border-light" width="50px" onclick="TurnSound(); Animate_Images();" style=""><span>Play Sound</span><img id="Sound_Btn_Cont1" src="img/sound_on.png"></button>
+                    <button id="Light_Switch" class="btnItmem btn btn-dark text-light border-1 border-light" width="50px" onclick="Switch_Light()"><span>Lights On</span><img id="Light_Switch_Cont1" src="img/switch_light_off.png"></button>
+                    <button id="clear_items" class="btnItmem mb-5 btn btn-warning border-1 border-light" width="50px" alt="" onclick="RemoveItems()">Clear items</button>
+                    <button id="AddSmItemBtn" class="btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Add_ItemSmall_Random()" style="width: 100px; height: 100px; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span class="fs-3">+1</span><br>random</button>
+                
+                </div>
             </div>
         </div>
         <div></div>
@@ -58,7 +72,12 @@
 <!-- custom scripts -->
 <script>
     //enable styles //////////////////////////////////////////////////////////////////////////////
-    function Connect_CSS(){
+    // let WindowWidth = document.getElementById("bodyItem");
+    var ViewWidth = visualViewport.width;
+    var ScreenViewWidth = window.innerWidth;
+    let AnimationMobilePostfix = "";
+
+    function Connect_CSS_and_mob(){
         let CSS_1 = document.createElement('link');
         CSS_1.setAttribute("rel", "stylesheet");
         CSS_1.setAttribute("href", "css/main_desktop.css");
@@ -67,7 +86,48 @@
         CSS_2.setAttribute("rel", "stylesheet");
         CSS_2.setAttribute("href", "css/animation_stylesheet_desktop.css");
         document.head.appendChild(CSS_2);
+        let CSS_3 = document.createElement('link');
+        CSS_3.setAttribute("rel", "stylesheet");
+        CSS_3.setAttribute("href", "css/main_mobile.css")
+        document.head.appendChild(CSS_3);
+        let CSS_4 = document.createElement('link');
+        CSS_4.setAttribute("rel", "stylesheet");
+        CSS_4.setAttribute("href", "css/animation_stylesheet_mobile.css")
+        document.head.appendChild(CSS_4);
+        // var SrceenWidth = Screen.width;
+        // WindowWidth
+        // window.alert(DevWidth);
+        // window.alert(SrceenWidth);
+        // window.alert(WindowWidth.Width);
+        if (ViewWidth < 800){
+            document.getElementById("Items_Panel").classList.remove("flex-column");
+            document.getElementById("Buttons_Panel").classList.remove("flex-column");
+
+            document.getElementById("Items_Panel").setAttribute("style", " ");
+            document.getElementById("Items_Panel").setAttribute("class", "d-flex flex-wrap justify-content-between Items_Panel_mobile sticky-bottom");
+            // document.getElementById("WarningBox").setAttribute("class","d-block bg-warning");
+            AnimationMobilePostfix = "_Mobile_";
+
+
+        }
+        // let ItemB1 = document.getElementById("proto_1");
+        // let ItemB2 = document.getElementById("itemAdd_2");
+        let ItemB3 = document.getElementById("itemAdd_3");
+        let ItemB4 = document.getElementById("itemAdd_4");
+        let ItemB5 = document.getElementById("itemAdd_5");
+        // ItemB2.setAttribute("style", "opacity: 0.5;");
+        // ItemB3.setAttribute("style", "opacity: 0.5;");
+        // ItemB4.setAttribute("style", "opacity: 0.5;");
+        // ItemB5.setAttribute("style", "opacity: 0.5;");
+        // ItemB2.disabled = true;
+        // ItemB3.disabled = true;
+        // ItemB4.disabled = true;
+        return AnimationMobilePostfix;
     }
+
+</script>
+<script>
+
 </script>
 <script>
     //Animation/////////////////////////////////////////////////////////////////////////////////
@@ -75,7 +135,7 @@
     // let BoxConteiner = document.getElementById("BoxConteiner");
     let BoxConteiner = document.getElementById("BoxBackConteiner");
     // let InputProto1 = ImageBitmap;
-    let InputProto1 = document.createElement("img").src = "proto_1.jpg";
+    let InputProto1 = document.createElement("img").src = "img/proto_3.jpg";
     
     ////inputs obgects:////
     // let InputObject;
@@ -84,13 +144,13 @@
 
 
     // inputObj_instance = "proto_3.jpg"; 
-
+    
 
     //sourse for append:
-    let source_1 = "img/barbus_transparent.png";
-    let source_2 = "img/orange_discus_fish_transparent.png";
-    let source_3 = "img/BannerfishTransparent.png";
-    let source_4 = "img/barbus_transparent.png";
+    let source_3 = "img/barbus_transparent.png";
+    let source_4 = "img/orange_discus_fish_transparent.png";
+    let source_2 = "img/BannerfishTransparent.png";
+    let source_1 = "img/cyan_discus_fish_transparent.png";
     let sourceArr = [
     source_1,
     source_2,
@@ -100,10 +160,10 @@
     let Rand_index = 0;
 
     //default value
-    let check_1 = "img/barbus_transparent.png";
-    let check_2 = "img/orange_discus_fish_transparent.png";
-    let check_3 = "img/BannerfishTransparent.png";
-    let check_4 = "img/barbus_transparent.png";
+    let check_3 = "img/barbus_transparent.png";
+    let check_4 = "img/orange_discus_fish_transparent.png";
+    let check_2 = "img/BannerfishTransparent.png";
+    let check_1 = "img/cyan_discus_fish_transparent.png";
 
     //result value
     let refer_instance_1;
@@ -134,19 +194,19 @@
     // let append_I4 = item_F4.Source;
 
     function Refer_Element1(){
-        refer_instance_1 = "img/barbus_transparent.png";
+        refer_instance_1 = "img/cyan_discus_fish_transparent.png";
         return refer_instance_1;
     }
     function Refer_Element2(){
-        refer_instance_2 = "img/orange_discus_fish_transparent.png";
+        refer_instance_2 = "img/BannerfishTransparent.png";
         return refer_instance_2;
     }
     function Refer_Element3(){
-        refer_instance_3 = "img/BannerfishTransparent.png";
+        refer_instance_3 = "img/barbus_transparent.png";
         return refer_instance_3;
     }
     function Refer_Element4(){
-        refer_instance_4 = "img/barbus_transparent.png";
+        refer_instance_4 = "img/orange_discus_fish_transparent.png";
         return refer_instance_4;
     }
 
@@ -175,7 +235,7 @@
             // BoxConteiner.append(item_1, item_2, item_3);
         }
     }
-    function AddRandom(){
+    function Add_4_Random(){
             BoxConteiner.append(item_1);
             inputObj_instance = source_1;
             item_1.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
@@ -193,6 +253,78 @@
             item_4.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
     }
 
+    function AddItem_T1(){
+        var CreateDivElement = document.createElement('div');
+        var CreateImageElement = document.createElement('img');
+        var AnimationNumber = Math.floor(Math.random() * 5) + 1; //number from 1 to 5
+        Rand_index = Math.floor(Math.random() * 3); //number from 1 to 4
+            
+            item_1 = source_3;
+            // item_1.innerHTML = '<img id="'+ SetID +'" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
+            CreateDivElement.classList.add("bg-transparent", "rounded-circle", "AnimatedImageBoxes", "itemsAnimation_V" + AnimationNumber + AnimationMobilePostfix);
+            CreateDivElement.setAttribute("style", "/*border: 2px solid red;*/ width:75px !important; block-size: 75px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+
+            CreateImageElement.setAttribute("src", source_1);
+            CreateImageElement.setAttribute("width", "70px");
+
+            CreateDivElement.appendChild(CreateImageElement);
+            BoxConteiner.append(CreateDivElement);
+            SetID++;
+    }
+    function AddItem_T2(){
+        var CreateDivElement = document.createElement('div');
+        var CreateImageElement = document.createElement('img');
+        var AnimationNumber = Math.floor(Math.random() * 5) + 1; //number from 1 to 5
+        Rand_index = Math.floor(Math.random() * 3); //number from 1 to 4
+            
+            item_1 = source_2;
+            // item_1.innerHTML = '<img id="'+ SetID +'" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
+            CreateDivElement.classList.add("bg-transparent", "rounded-circle", "AnimatedImageBoxes", "itemsAnimation_V" + AnimationNumber);
+            CreateDivElement.setAttribute("style", "width:75px !important; block-size: 75px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+
+            CreateImageElement.setAttribute("src", source_2);
+            CreateImageElement.setAttribute("width", "70px");
+
+            CreateDivElement.appendChild(CreateImageElement);
+            BoxConteiner.append(CreateDivElement);
+            SetID++;
+    }
+    function AddItem_T3(){
+        var CreateDivElement = document.createElement('div');
+        var CreateImageElement = document.createElement('img');
+        var AnimationNumber = Math.floor(Math.random() * 5) + 1; //number from 1 to 5
+        Rand_index = Math.floor(Math.random() * 3); //number from 1 to 4
+            
+            item_1 = source_2;
+            // item_1.innerHTML = '<img id="'+ SetID +'" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
+            CreateDivElement.classList.add("bg-transparent", "rounded-circle", "AnimatedImageBoxes", "itemsAnimation_V" + AnimationNumber);
+            CreateDivElement.setAttribute("style", "width:75px !important; block-size: 75px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+
+            CreateImageElement.setAttribute("src", source_3);
+            CreateImageElement.setAttribute("width", "70px");
+
+            CreateDivElement.appendChild(CreateImageElement);
+            BoxConteiner.append(CreateDivElement);
+            SetID++;
+    }
+    function AddItem_T4(){
+        var CreateDivElement = document.createElement('div');
+        var CreateImageElement = document.createElement('img');
+        var AnimationNumber = Math.floor(Math.random() * 5) + 1; //number from 1 to 5
+        Rand_index = Math.floor(Math.random() * 3); //number from 1 to 4
+            
+            item_1 = source_2;
+            // item_1.innerHTML = '<img id="'+ SetID +'" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
+            CreateDivElement.classList.add("bg-transparent", "rounded-circle", "AnimatedImageBoxes", "itemsAnimation_V" + AnimationNumber);
+            CreateDivElement.setAttribute("style", "width:75px !important; block-size: 75px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+
+            CreateImageElement.setAttribute("src", source_4);
+            CreateImageElement.setAttribute("width", "70px");
+
+            CreateDivElement.appendChild(CreateImageElement);
+            BoxConteiner.append(CreateDivElement);
+            SetID++;
+    }
 
     function RemoveItems(){
             BoxConteiner.innerHTML = "";
@@ -235,7 +367,8 @@
         return set_X, set_Y
     }
 
-    function Add_ItemSmall_01(){
+
+    function Add_ItemSmall_Random(){
         
         let input_instance_from_src = source_2;
         // BoxConteiner.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ input_instance_from_src +'" alt="">';
@@ -297,8 +430,30 @@
             window.alert("You got maximum number of items!");
             RoolElement.disabled=true;
             RoolElement.classList.add("bg-transparent");
-        }return ItemsLimit;
+        }
+        
+        RoolElement.disabled=true;
+        // RoolElement.classList.toggle("border-4");
+        RoolElement.classList.toggle("bg-success");
+        // RoolElement.classList.add("border-0");
+        RoolElement.classList.toggle("bg-transparent");
+        DelayActionAddRandom(setDelay);
+        return ItemsLimit;
     }
+   
+
+    const setDelay = setTimeout(DelayActionAddRandom, 5000);
+        function DelayActionAddRandom(){
+        
+        //  RoolElement.classList.remove("border-0 bg-tansparent");
+        //  RoolElement.classList.add("border-4", "bg-success");
+        // RoolElement.classList.remove("border-0", "bg-tansparent");
+        // RoolElement.classList.toggle("border-4");
+        RoolElement.classList.toggle("bg-tansparent");
+        // RoolElement.classList.toggle("bg-success");
+        RoolElement.disabled=false;
+    }
+
     let BubbleCounter = 1;
     function AddBubbles(){
         do{
@@ -408,7 +563,7 @@
         BoxConteiner.appendChild(array_8[5]);
         BoxConteiner.appendChild(array_8[6]);
         BoxConteiner.appendChild(array_8[7]);
-        }    
+        }   
     }
 
 
@@ -417,19 +572,34 @@
     //Sounds/////////////////////////////////////////////////////////////////////////////////
     let StateID = 1;
     function TurnSound(){
+
         let S1 = document.getElementById("bubbles_sound");
         let S_btn = document.getElementById("Sound_Btn");
         if (StateID == 1) {
             S1.play();
-            S_btn.innerHTML = "Stop Sound" ;
+            S_btn.innerHTML = "<span>Stop Sound</span><img id='Sound_Btn_Cont1' src=''>" ;
+        // document.getElementById("Sound_Btn").setAttribute("style", "background-image: url('img/sound_off.png'); background-size: cover, cover;");
+        document.getElementById("Sound_Btn_Cont1").src = "img/sound_off.png";
+        
+        // document.getElementById("Sound_Btn_Cont1").setAttribute("src", "img/sound_off.png");
+        // S_btn.childNodes(1).setAttribute("img/sound_on.png");
+
         } 
         if(StateID == 2){
             // S1.removeAttribute("loop");
             S1.pause();
-            S_btn.innerHTML = "Play Sound" ;
+            S_btn.innerHTML = "<span>Play Sound</span><img id='Sound_Btn_Cont1' src=''>" ;
+        // document.getElementById("Sound_Btn").setAttribute("style", "background-image: url('img/sound_on.png'); background-size: cover, cover;");
+        document.getElementById("Sound_Btn_Cont1").src = "img/sound_on.png";
+        // document.getElementById("Sound_Btn_Cont1").setAttribute("src", "img/sound_on.png");
+        // S_btn.childNodes(1).setAttribute("img/sound_off.png");
+
+
         }
         Change_State();
     }
+
+
     function Change_State(){
         if (StateID == 1){
             StateID = 2;
@@ -443,16 +613,22 @@
     //Lights/////////////////////////////////////////////////////////////////////////////////
     let Light_srs_1 = document.getElementById("LightSource_Element");
     let SwBtn = document.getElementById("Light_Switch");
+    
+
     let LightStateID = 1;
 
     function Switch_Light(){
         if (LightStateID == 1){
             Light_srs_1.classList.add("LightOn");
             SwBtn.innerHTML = "Lights Off";
+            SwBtn.innerHTML = "<span>Lights Off</span><img id='Light_Switch_Cont1' src=''>";
+            document.getElementById("Light_Switch_Cont1").src = "img/switch_light_on.png";
         } 
         if(LightStateID == 2){
             Light_srs_1.classList.remove("LightOn");
             SwBtn.innerHTML = "Lights On";
+            SwBtn.innerHTML = "<span>Lights Off</span><img id='Light_Switch_Cont1' src=''>";
+            document.getElementById("Light_Switch_Cont1").src = "img/switch_light_off.png";
         } 
         Set_Light_State();
     }
@@ -464,6 +640,29 @@
             }
             return LightStateID;
         }
+</script>
+<script>
+        // DevWidth.addEventListener();
+    //     function CheckWindowSize(){
+    //     if (ScreenViewWidth < 800){
+    //         // document.getElementById("WarningBox").setAttribute("class","d-block bg-warning");
+    //         // document.getElementById("WarningBox").classList.add("d-block");
+    //         document.getElementById("WarningBox").setAttribute("class", "d-block");
+    //         // document.getElementById("AppMainContainer").setAttribute("hidden", "hidden");
+    //         document.getElementById("AppMainContainer").classList.add("d-none");
+    //         document.getElementById("AppMainContainer").classList.remove("d-flex");
+
+    //     } if (ScreenViewWidth > 800){
+    //         document.getElementById("AppMainContainer").classList.remove("d-none");
+    //         document.getElementById("AppMainContainer").classList.add("d-flex");
+
+    //         document.getElementById("WarningBox").classList.add("d-none");
+    //         // document.getElementById("AppMainContainer").classList.add("d-flex");
+    //          window.alert("resized !!! Width is:" + ScreenViewWidth);
+
+    //     }
+
+    // }
 </script>
 </body>
 </html>

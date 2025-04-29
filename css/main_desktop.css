@@ -1,3 +1,37 @@
 :root{
     --SetX: range: "10px";
+    --MainBG: url('img/waves.png');
 }
+body{
+    /* background: url('img/waves.png') !important; */
+    background-size: cover;
+    /* border-radius: 100px !important; */ 
+}
+
+.btnItmemImage:hover{
+    cursor: pointer;
+    background-color: cornflowerblue;
+    border: 5px solid purple !important;
+    outline-color: black !important;
+}
+.btnItmem:hover{
+    background-color: cornflowerblue !important;
+    border-color: purple !important;
+    outline-color: black !important;
+}
+
+#BoxCoverBack, #BoxCoverMiddle, #BoxCoverFront {
+    width: 75%;
+}
+
+@media screen and (min-width: 801px) {
+    body{
+        /* border: 2px solid green !important; */
+    }
+    #BoxBackConteiner{
+        block-size: clamp(10em, 75vw, 15em);
+        /* width: clamp(5em, 75vw, 15em)!important; */
+        /* border: 2px solid purple !important; */
+    }
+}
+
