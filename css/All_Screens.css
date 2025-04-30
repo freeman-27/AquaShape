@@ -19,3 +19,13 @@
 #AddBubbles_Btn_Mobile span{
     display: none;
 }
+
+.BodyCustomBG{
+    background: red, url('img/CustomBackground/fon-podvodnogo-mira.jpg') !important;
+    background-size: cover !important;
+    background-attachment: fixed;
+    /* backdrop-filter: ;
+    -moz-background-clip: ; */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}

@@ -30,11 +30,19 @@
         block-size: clamp(5em, 100vw, 30em)!important;
         /*border: 2px solid yellow !important; /* --------------------------------- */
     }
+    .BoxCoverBackSphere{
+        /* width: 25% !important; */
+        height: 70% !important;
+        background-color: rgba(116, 71, 172, 0.4) !important;
+        border-radius: 50%;
+        /* left: clamp(0, 100vw, 10%)!important;
+        right: clamp(0, 100vw, 10%)!important; */
+        scale: 0.8;
+    }
     #Items_Panel_Mobile{
         /* bottom: 200px !important;  */
         width: 100% !important; 
-       
-        /* block-size: 200px !important; */
+        block-size: 200px;
     }
     #Buttons_Panel_Mobile{
         /* padding: 0 !important; */
@@ -64,6 +72,20 @@
         /* bottom: 42em !important; */
         right: 15% !important;
         /* right: auto !important; */
+    }
+    #UnCollapse_MobilePanel_Btn, #Collapse_MobilePanel_Btn, #HomePage_Btn{
+        position: absolute;
+        /* width: 50px !important;
+        block-size: 50px !important; */
+        bottom: 220px !important;
+        right: 15% !important;
+    }
+    #HomePage_Btn{
+        left: 10% !important;
+    }
+    #UnCollapse_MobilePanel_Btn{
+        right: 14% !important;
+        bottom: 1% !important;
     }
     .btnItmem{
         width: 5em !important;

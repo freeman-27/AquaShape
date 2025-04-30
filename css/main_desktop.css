@@ -4,7 +4,7 @@
 }
 body{
     /* background: url('img/waves.png') !important; */
-    background-size: cover;
+    /* background-size: cover; */
     /* border-radius: 100px !important; */ 
 }
 
@@ -22,6 +22,14 @@ body{
 
 #BoxCoverBack, #BoxCoverMiddle, #BoxCoverFront {
     width: 75%;
+    left: auto;
+    right: auto;
+}
+.BoxCoverBackSphere{
+    height: 85% !important;
+    background-color: rgba(116, 71, 172, 0.4) !important;
+    border-radius: 50%;
+    /* scale: 0.8; */
 }
 
 @media screen and (min-width: 801px) {
