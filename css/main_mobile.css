@@ -21,24 +21,23 @@
         /*border: 1px dashed green !important;  /* --------------------------------- */
         border: none !important;
     }
+    #AppMainContainer{
+    padding: 0 !important;
+    }
+
     #BoxCoverBack, #BoxCoverMiddle, #BoxCoverFront {
         position: absolute;
-        left: -25% !important;
+        left: -10% !important;
         right: auto !important;
+        top: 8em !important; /* check with animation area */
+        width: clamp(100%, 150vw, 120%)!important;
+        height: 55% !important;
+        /* block-size: clamp(60%, 100vw, 90%); */
+        /* block-size: clamp(6em, 100vw, 30em)!important; */
         padding: 0 !important;
-        width: clamp(150%, 100vw, 200%)!important;
-        block-size: clamp(5em, 100vw, 30em)!important;
         /*border: 2px solid yellow !important; /* --------------------------------- */
     }
-    .BoxCoverBackSphere{
-        /* width: 25% !important; */
-        height: 70% !important;
-        background-color: rgba(116, 71, 172, 0.4) !important;
-        border-radius: 50%;
-        /* left: clamp(0, 100vw, 10%)!important;
-        right: clamp(0, 100vw, 10%)!important; */
-        scale: 0.8;
-    }
+
     #Items_Panel_Mobile{
         /* bottom: 200px !important;  */
         width: 100% !important; 
@@ -109,16 +108,47 @@
         background-color: darkred;
     }
 
-/*Moblie  CustomButtons */
-#Sound_Btn_Modile, #Light_Switch_Modile{
-    /* background-image: url('img/sound_on.png'); background-size: cover, cover; */
-    padding: 0;
-}
+    .BoxCoverBackSphere{
+        /* width: 25% !important; */
+        /* block-size: 60% !important; */
+        width: 35% !important;
+        height: 80% !important;
+        /* top: 20%; */
+        /* background-color: rgba(255, 0, 242, 0.822) !important; */   /*********** check */
+        /* border-radius: 50%; */
+        left: 20% !important;
+        right: auto !important;
+        /* left: clamp(0, 100vw, 10%)!important;
+        right: clamp(0, 100vw, 10%)!important; */
+        scale: 0.8;
+    }
+    .BoxCoverBackDodecaedr{
+        
+        width: 100% !important;
+        position: absolute !important;
+        height: 80% !important;
+        
+        
+        /* background-color: rgba(255, 0, 242, 0.822) !important; */
 
-#Sound_Btn_Modile span, #Light_Switch_Mobile span{
-    color: green;
-    display: none !important;
-}
+        /* left: 20% !important;
+        right: auto !important; */
+        top: 10em !important;
+        scale: 0.8;
+
+    }
+
+
+    /*Moblie  CustomButtons */
+    #Sound_Btn_Modile, #Light_Switch_Modile{
+        /* background-image: url('img/sound_on.png'); background-size: cover, cover; */
+        padding: 0;
+    }
+
+    #Sound_Btn_Modile span, #Light_Switch_Mobile span{
+        color: green;
+        display: none !important;
+    }
 
 }
 
