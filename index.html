@@ -29,7 +29,8 @@
         <div class="container-fuild" style="z-index: 250005 !important;">
             <h1 class="bg-black text-light text-center" onclick="ChangeAquaForm()">AquaBox Web</h1>
             <div id="testItem"><img id="" class="d-none d-md-block mb-4 dropContent" width="50px" src="img/aquacube_content_image_r2.ico" alt="" style="position: absolute; left: 50px; top:0;"></div>
-        <!-- sticky menu block | no fixated -->
+            <button class="d-none d-md-block btn text-light ms-5" onclick="HomePage()">go home page</button>
+            <!-- sticky menu block | no fixated -->
         <div id="MobileMenuBlock" class="" style="position: absolute; z-index: 120005 !important; left: 2em;">
             <div id="stickyMenuClosed" class="ms-3 d-block d-md-none">  
                 <div id="stickyOpenStickyMenuButton" onscroll="stickyPositionFastLinks()">
@@ -838,19 +839,43 @@ function openStickyMenu(){
 }
 </script>
 <script>
-    let FormBG_StateID = 1;
+    let FormBG_StateID = 1; //start value - number of next imageform
     let MainBackgroundImageSrc = "img/aquacube_back_part_view(80per).png";
+    // Images Type 1:
     let SourseBG_1_p1 = "img/aquacube_back_part_view(80per).png";       //image cube part1 (back)
     let SourseBG_1_p2 = "img/aquacube_middlecontentview(100per).png";  //image cube part2  (middle)
     let SourseBG_1_p3 = "img/aquacube_frontview(10per).png";            //image cube part3   (front)   
-    let SourseBG_2 = "img/aquaSphere_full_view.png";
+    // Images Type 2:
+    let SourseBG_2_p1 = "img/aquaSphere_full_view.png";
+    let SourseBG_2_p2 = "";
+    let SourseBG_2_p3 = "";
+    // Images Type 3:
+    let SourseBG_3_p1 = "img/DecaedrShape_Background_GreenMeshGradient.png";
+    let SourseBG_3_p2 = "img/DecaedrShape_MiddleImage_Rentgen.png";
+    let SourseBG_3_p3 = "img/DecaedrShape_FrontImage_White_noBackgr.png";
+    // Images Type 4:
+    let SourseBG_4_p1 = "img/IcoShpereGlass_ZeroBack_Layer_MeshGradient_Light.png";
+    let SourseBG_4_p2 = "img/IcoShpereGlass_Middle_Layer_Edges.png";
+    let SourseBG_4_p3 = "img/IcoShpereGlass_Front_Layer.png";
+
     let SourceEmpty = ""; //empty value
 
+    // Type 1:
     let ReplaceImg_T1_p1 = ""; //image cube part1 (back)
     let ReplaceImg_T1_p2 = ""; //image cube part2  (middle)
     let ReplaceImg_T1_p3 = ""; //image cube part3   (front)
-    let ReplaceImg_T2 = ""; //image sphere
-    let ReplaceImg_T3 = ""; //image other 
+    //Type 2:
+    let ReplaceImg_T2_p1 = ""; //image sphere
+    let ReplaceImg_T2_p2 = ""; //image sphere
+    let ReplaceImg_T2_p3 = ""; //image sphere
+    // Type 3:
+    let ReplaceImg_T3_p1 = ""; //image IcoShpere part1 (back) 
+    let ReplaceImg_T3_p2 = ""; //image IcoShpere part2  (middle) 
+    let ReplaceImg_T3_p3 = ""; //image IcoShpere part3   (front) 
+    // Type 4:
+    let ReplaceImg_T4_p1 = ""; //image IcoShpere part1 (back) 
+    let ReplaceImg_T4_p2 = ""; //image IcoShpere part2  (middle) 
+    let ReplaceImg_T4_p3 = ""; //image IcoShpere part3   (front) 
 
     let modifyAppBG_Element = document.getElementById("AppMainContainer");
 
@@ -881,26 +906,106 @@ function Delete_MainItemBG(){
         let Del_FrontImage = document.getElementById("BoxCoverFront");
 
         if (FormBG_StateID ==  1){
+            // Backgound ImageForm Type 2 ============ //
+            Del_BackImage.remove();
+            Del_MiddleImage.remove(); 
+            Del_FrontImage .remove();
+           //backside (part1):
+            ReplaceImg_T2_p1 = document.createElement('img');
+            ReplaceImg_T2_p1.setAttribute('id', 'BoxCoverBack');
+            ReplaceImg_T2_p1.setAttribute('class', 'BoxCoverBackSphere');
+            ReplaceImg_T2_p1.setAttribute('style', 'z-index: 20005; opacity: 0.5; position: absolute; width: 50%; max-height:80%; left: 25%; right: auto;');
+            ReplaceImg_T2_p1.setAttribute('src', SourseBG_2_p1);
+            //backside (part2):
+            ReplaceImg_T2_p2 = document.createElement('img');
+            ReplaceImg_T2_p2.setAttribute('id', 'BoxCoverMiddle');
+            ReplaceImg_T2_p2.setAttribute('class', 'BoxCoverBackSphere bg-red');
+            ReplaceImg_T2_p2.setAttribute('style', 'z-index: 20005; opacity: 0.5; position: absolute; width: 50%; max-height:80%; left: 25%; right: auto;');
+            ReplaceImg_T2_p2.setAttribute('src', SourseBG_2_p1);
+            //backside (part3):
+            ReplaceImg_T2_p3 = document.createElement('img');
+            ReplaceImg_T2_p3.setAttribute('id', 'BoxCoverFront');
+            ReplaceImg_T2_p3.setAttribute('class', 'BoxCoverBackSphere border-light');
+            ReplaceImg_T2_p3.setAttribute('style', 'z-index: 20005; opacity: 0.8; position: absolute; width: 50%; max-height:80%; left: 25%; right: auto;');
+            ReplaceImg_T2_p3.setAttribute('src', SourseBG_2_p1);
+            ReplaceImg_T2_p3.setAttribute('ondragenter', 'animateFunction_ALL()');
+            
+            modifyAppBG_Element.appendChild(ReplaceImg_T2_p1);
+            modifyAppBG_Element.appendChild(ReplaceImg_T2_p2);
+            modifyAppBG_Element.appendChild(ReplaceImg_T2_p3);
 
+            // Set_FormBG_State();
+        }
+
+        if (FormBG_StateID == 2){
+            // Backgound ImageForm Type 3 ============ //
+            Del_BackImage.remove();
+            Del_MiddleImage.remove(); 
+            Del_FrontImage .remove();
+            // Del_FrontImage .remove();
+
+            // document.getElementById("BoxCoverFront").remove();
+            //backside (part1):
+            ReplaceImg_T3_p1 = document.createElement('img');
+            ReplaceImg_T3_p1.setAttribute('id', 'BoxCoverBack');
+            ReplaceImg_T3_p1.setAttribute('style', 'z-index: 20005; opacity: 1; position: absolute; width: 60%; max-height:90%; left: 20%; right: auto; top: 50px;');
+            ReplaceImg_T3_p1.setAttribute('src', SourseBG_3_p1);
+            //middleside (part2):
+            ReplaceImg_T3_p2 = document.createElement('img');
+            ReplaceImg_T3_p2.setAttribute('id', 'BoxCoverMiddle');
+            ReplaceImg_T3_p2.setAttribute('style', 'z-index: 85005; opacity: 1; position: absolute; width: 60%; max-height:90%; left: 20%; right: auto; top: 50px;');
+            ReplaceImg_T3_p2.setAttribute('src', SourseBG_3_p2);
+            //FrontSide (part3):
+            ReplaceImg_T3_p3 = document.createElement('img');
+            ReplaceImg_T3_p3.setAttribute('id', 'BoxCoverFront');
+            ReplaceImg_T3_p3.setAttribute('style', 'z-index: 90005; opacity: 0.25; position: absolute; width: 60%; max-height:90%; left: 20%; right: auto; top: 50px;');
+            ReplaceImg_T3_p3.setAttribute('src', SourseBG_3_p3);
+            // ReplaceImg_T1_p3.setAttribute('ondragenter', 'animateFunction_ALL()');
+
+            //add new elements to DOM:
+            modifyAppBG_Element.appendChild(ReplaceImg_T3_p1);
+            modifyAppBG_Element.appendChild(ReplaceImg_T3_p2);
+            modifyAppBG_Element.appendChild(ReplaceImg_T3_p3);
+        } 
+
+        if(FormBG_StateID == 3){
+            // Backgound ImageForm Type 4 ============ //
+
+            // Del_BackImage.remove();
             Del_BackImage.remove();
             Del_MiddleImage.remove(); 
             Del_FrontImage .remove();
 
-            ReplaceImg_T2 = document.createElement('img');
-            ReplaceImg_T2.setAttribute('id', 'BoxCoverBack');
-            ReplaceImg_T2.setAttribute('class', 'BoxCoverBackSphere');
-            ReplaceImg_T2.setAttribute('style', 'z-index: 20005; opacity: 0.8; position: absolute; width: 50%; max-height:80%; left: 25%; right: auto;');
+            //middleside (part1):
+            ReplaceImg_T4_p1 = document.createElement('img');
+            ReplaceImg_T4_p1.setAttribute('id', 'BoxCoverBack');
+            ReplaceImg_T4_p1.setAttribute('style', 'z-index: 20005; opacity: 0.25; position: absolute; width: 65%; max-height:85%; left: 20%; right: auto; top: 100px;');
+            ReplaceImg_T4_p1.setAttribute('src', SourseBG_4_p1);
 
-            ReplaceImg_T2.setAttribute('src', SourseBG_2);
-            ReplaceImg_T2.setAttribute('ondragenter', SourseBG_2);
-            modifyAppBG_Element.appendChild(ReplaceImg_T2);
-            ReplaceImg_T2.setAttribute('ondragenter', 'animateFunction_ALL()');
+            //middleside (part2):
+            ReplaceImg_T4_p2 = document.createElement('img');
+            ReplaceImg_T4_p2.setAttribute('id', 'BoxCoverMiddle');
+            ReplaceImg_T4_p2.setAttribute('style', 'z-index: 85005; opacity: 1; position: absolute; width: 65%; max-height:85%; left: 20%; right: auto; top: 100px;');
+            ReplaceImg_T4_p2.setAttribute('src', SourseBG_4_p2);
+    
+            //FrontSide (part3):
+            ReplaceImg_T4_p3 = document.createElement('img');
+            ReplaceImg_T4_p3.setAttribute('id', 'BoxCoverFront');
+            ReplaceImg_T4_p3.setAttribute('style', 'z-index: 90005; opacity: 0.15; position: absolute; width: 65%; max-height:85%; left: 20%; right: auto; top: 100px;');
+            ReplaceImg_T4_p3.setAttribute('src', SourseBG_4_p3);
+            ReplaceImg_T4_p3.setAttribute('ondragenter', 'animateFunction_ALL()');
 
-            // Set_FormBG_State();
+            //add new elements to DOM:
+            modifyAppBG_Element.appendChild(ReplaceImg_T4_p1);
+            modifyAppBG_Element.appendChild(ReplaceImg_T4_p2);
+            modifyAppBG_Element.appendChild(ReplaceImg_T4_p3);
         }
-        if (FormBG_StateID == 2){
 
+        if (FormBG_StateID == 4){
+            // Backgound ImageForm Type 1 ============ //
             Del_BackImage.remove();
+            Del_MiddleImage.remove(); 
+            Del_FrontImage .remove();
             // Del_FrontImage .remove();
 
             // document.getElementById("BoxCoverFront").remove();
@@ -914,27 +1019,29 @@ function Delete_MainItemBG(){
             ReplaceImg_T1_p2.setAttribute('id', 'BoxCoverMiddle');
             ReplaceImg_T1_p2.setAttribute('style', 'z-index: 30005; opacity: 0.5; position: absolute; width: 75%;');
             ReplaceImg_T1_p2.setAttribute('src', SourseBG_1_p2);
-            ReplaceImg_T1_p2.setAttribute('ondragenter', 'animateFunction_ALL()');
-            
-            //middleside (part3):
+            //FrontSide (part3):
             ReplaceImg_T1_p3 = document.createElement('img');
             ReplaceImg_T1_p3.setAttribute('id', 'BoxCoverFront');
             ReplaceImg_T1_p3.setAttribute('style', 'z-index: 90005; opacity: 0.8; position: absolute; width: 75%;');
             ReplaceImg_T1_p3.setAttribute('src', SourseBG_1_p3);
-            ReplaceImg_T1_p3.setAttribute('ondragenter', 'animateFunction_ALL()');
+            // ReplaceImg_T1_p3.setAttribute('ondragenter', 'animateFunction_ALL()');
+
             //add new elements to DOM:
             modifyAppBG_Element.appendChild(ReplaceImg_T1_p1);
             modifyAppBG_Element.appendChild(ReplaceImg_T1_p2);
             modifyAppBG_Element.appendChild(ReplaceImg_T1_p3);
-
-            // Set_FormBG_State();
         } 
+
         Set_FormBG_State();
 
         function Set_FormBG_State(){
-            if (FormBG_StateID == 1){
-                FormBG_StateID = 2;
-            } else if (FormBG_StateID == 2){
+            // if (FormBG_StateID == 1){
+            //     FormBG_StateID = 2;
+            // } else if (FormBG_StateID == 2){
+            //     FormBG_StateID = 1;
+            // }
+            FormBG_StateID++;
+            if (FormBG_StateID == 4){
                 FormBG_StateID = 1;
             }
             return FormBG_StateID;
