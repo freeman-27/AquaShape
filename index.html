@@ -23,13 +23,14 @@
     <link rel="icon" href="img/aquacube_content_image_r2.ico" type="image/x-icon"/>
 
 </head>
-<body id="bodyItem" class="bg-dark" onload ="Connect_CSS_and_mob();" style="" > <!-- onresize="CheckWindowSize()" style=""-->
+<body id="bodyItem" class="bg-dark" onload ="Connect_CSS_and_mob();" style="background-image: url('img/CustomBackground/forBlurBackground_sized_Aqua.png');" > <!-- onresize="CheckWindowSize()" style=""-->
     <main>
-        <canvas class="" style="border: 2px solid red ; z-index: -1; position: absolute; background: url('img/waves.png'); opacity: 0.5; width: 98%; height: 98%;"></canvas>
+        <canvas id="MainBGitem" class="" style="border: 2px solid red ; z-index: -2; position: absolute; background: url('img/CustomBackground/forBlurBackground_sized_Cobalt.png'); background-size: 65%, 80%; background-position-x: 50%; background-position-y: 5em; background-repeat: no-repeat; opacity: 0.5; width: 98%; height: 98%;"></canvas>
+
         <div class="container-fuild" style="z-index: 250005 !important;">
             <h1 class="bg-black text-light text-center" onclick="ChangeAquaForm()">AquaBox Web</h1>
             <div id="testItem"><img id="" class="d-none d-md-block mb-4 dropContent" width="50px" src="img/aquacube_content_image_r2.ico" alt="" style="position: absolute; left: 50px; top:0;"></div>
-            <button class="d-none d-md-block btn text-light ms-5" onclick="HomePage()">go home page</button>
+            <button class="d-none d-md-block btn text-light ms-5" onclick="HomePage()" style="z-index: 13005; position: relative;">go home page</button>
             <!-- sticky menu block | no fixated -->
         <div id="MobileMenuBlock" class="" style="position: absolute; z-index: 120005 !important; left: 2em;">
             <div id="stickyMenuClosed" class="ms-3 d-block d-md-none">  
@@ -89,16 +90,18 @@
             <div id="WarningBox" class="mt-5 bg-success d-none fs-3" style="block-size: 500px;">123</div>
         </div>
         <div class="d-flex justify-content-between align-items-center">
-            <div id="AppMainContainer" class="container d-flex d-inline-flex">
+            <div id="AppMainContainer" class="container d-flex d-inline-flex" style="">
                 <!-- <div class="text-center d-flex"> -->
                     <div id="LightSource_Element" class="bg-black border-2 border-light rounded-circle" style="width: 0px; block-size: 0px; position: absolute; left: 50%; top: 20%; z-index: 0;"></div>
                     <!-- <img id="BoxCover" width="115%" src="img/aquacube_backview.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5;"> -->
                     <!-- <img id="BoxCoverSphereBack" width="" src="img/aquaSphere_full_view.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5; position: absolute; display: block; width: 45%;"> -->
-                    <img id="BoxCoverBack" width="" src="img/aquacube_back_part_view(80per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5; position: absolute;">
+                    <img id="BoxCoverBack" width="" src="img/aquacube_back_part_view(80per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5; position: absolute; ">
                     <img id="BoxCoverMiddle" width="" src="img/aquacube_middlecontentview(100per)_and_ground.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 30005; opacity: 0.5; position: absolute;">
                     <img id="BoxCoverFront" width="" src="img/aquacube_frontview(10per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 90005; opacity: 0.8; position: absolute;">
                     <div id="BoxBackConteiner" class="d-flex flex-wrap border border-1 border-secondary bg-transparent" style="width: 35%; block-size: 60%; border-style: dashed !important; z-index: 50005; margin-left: 20%; position: absolute; align-self: center; top:20%;">1</div>
-                <!-- </div> -->
+                    <div id="blurMask" class="" style="border: 0px dotted green; block-size: 55.5em; width: 100%; left:0%; top:50px; z-index: 1005 !important; position: absolute; -webkit-backdrop-filter: blur(50px) !important;
+                    backdrop-filter: blur(50px) !important;"></div>
+                    <!-- </div> -->
             </div>
             <div id="Items_Panel" class="d-none d-md-flex flex-column justify-content-between align-items-center border-black border-2 border bg-secondary"  style="z-index: 20005; width: 120px; block-size: 95%; position: absolute; right: 0; top:5%;">
                 <!-- <img id="proto_1" class="mb-4 dropContent" style="outline: 1px solid white; outline-offset: 5px; border: 3px solid yellowgreen; border-radius:25px; height:50px;" width="50px" src="proto_1.jpg" alt="" onmousedown="Refer_Element1()"> -->
@@ -858,6 +861,8 @@ function openStickyMenu(){
     let SourseBG_4_p1 = "img/IcoShpereGlass_ZeroBack_Layer_MeshGradient_Light.png";
     let SourseBG_4_p2 = "img/IcoShpereGlass_Middle_Layer_Edges.png";
     let SourseBG_4_p3 = "img/IcoShpereGlass_Front_Layer.png";
+    //main backgound element
+    let MainItemBGImage = document.getElementById("MainBGitem");
 
     let SourceEmpty = ""; //empty value
 
@@ -931,9 +936,17 @@ function Delete_MainItemBG(){
             ReplaceImg_T2_p3.setAttribute('src', SourseBG_2_p3);
             ReplaceImg_T2_p3.setAttribute('ondragenter', 'animateFunction_ALL()');
             
+
+            // custom background :
+            MainItemBGImage.setAttribute("style", "z-index: -2; position: absolute; background: url('img/CustomBackground/forBlurBackground_sized_Violet.png'); background-size: 65%, 80%; background-position-x: 50%; background-position-y: 5em; background-repeat: no-repeat; opacity: 0.5; width: 98%; height: 98%;");  
+            document.getElementById("bodyItem").setAttribute("style", "background-image: url('img/CustomBackground/forBlurBackground_sized_Cobalt.png');");
+
             modifyAppBG_Element.appendChild(ReplaceImg_T2_p1);
             modifyAppBG_Element.appendChild(ReplaceImg_T2_p2);
             modifyAppBG_Element.appendChild(ReplaceImg_T2_p3);
+
+
+
 
             // Set_FormBG_State();
         }
@@ -965,6 +978,10 @@ function Delete_MainItemBG(){
             ReplaceImg_T3_p3.setAttribute('style', 'z-index: 90005; opacity: 0.25; position: absolute; width: 60%; max-height:90%; left: 20%; right: auto; top: 50px;');
             ReplaceImg_T3_p3.setAttribute('src', SourseBG_3_p3);
             // ReplaceImg_T1_p3.setAttribute('ondragenter', 'animateFunction_ALL()');
+
+            // custom background :
+            MainItemBGImage.setAttribute("style", "z-index: -2; position: absolute; background: url('img/CustomBackground/forBlurBackground_sized_Green.png'); background-size: 65%, 80%; background-position-x: 50%; background-position-y: 5em; background-repeat: no-repeat; opacity: 0.5; width: 98%; height: 98%;");  
+            document.getElementById("bodyItem").setAttribute("style", "background-image: url('img/CustomBackground/forBlurBackground_sized_Blue.png');");
 
             //add new elements to DOM:
             modifyAppBG_Element.appendChild(ReplaceImg_T3_p1);
