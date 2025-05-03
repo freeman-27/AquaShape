@@ -58,7 +58,7 @@
                             <div id="funcBtn1" 
                                     class="d-block d-md-none btn btn-primary bg-success text-black border-4 border rounded-circle" role="button" href="https://wmit.online"
                                     style="text-align: center !important; font-size: 25px; position: absolute; top: 2.25em; left: 4.5em; 
-                                    width: 50px; block-size: 50px; background: url('img/cyan_discus_fish_transparent.png'); background-size: cover, cover;"><span>BG</span>
+                                    width: 50px; block-size: 50px; background: url(''); background-size: cover, cover;"><span>BG</span>
                             </div>
                     </a>
                 </div>
@@ -68,7 +68,7 @@
                             <div id="funcBtn2" 
                                     class="d-block d-md-none btn btn-primary bg-warning text-black border-4 border rounded-circle" role="button" href="https://wmit.online"
                                     style="text-align: center !important; font-size: 25px; position: absolute; top: 3.75em; left: 3em; 
-                                    width: 50px; block-size: 50px; background: url('img/cyan_discus_fish_transparent.png'); background-size: cover, cover;"><span>12</span>
+                                    width: 50px; block-size: 50px; background: url(''); background-size: cover, cover;"><span>C</span>
                             </div>
                     </a>
                 </div>
@@ -97,7 +97,7 @@
                     <!-- <img id="BoxCoverSphereBack" width="" src="img/aquaSphere_full_view.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5; position: absolute; display: block; width: 45%;"> -->
                     <img id="BoxCoverBack" width="" src="img/aquacube_back_part_view(80per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 20005; opacity: 0.5; position: absolute; ">
                     <img id="BoxCoverMiddle" width="" src="img/aquacube_middlecontentview(100per)_and_ground.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 30005; opacity: 0.5; position: absolute;">
-                    <img id="BoxCoverFront" width="" src="img/aquacube_frontview(10per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 90005; opacity: 0.8; position: absolute;">
+                    <img id="BoxCoverFront" width="" src="img/aquacube_frontview(10per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 90005; opacity: 0.3; position: absolute;">
                     <div id="BoxBackConteiner" class="d-flex flex-wrap border border-1 border-secondary bg-transparent" style="width: 35%; block-size: 60%; border-style: dashed !important; z-index: 50005; margin-left: 20%; position: absolute; align-self: center; top:20%;">1</div>
                     <div id="blurMask" class="" style="border: 0px dotted green; block-size: 55.5em; width: 100%; left:0%; top:50px; z-index: 1005 !important; position: absolute; -webkit-backdrop-filter: blur(50px) !important;
                     backdrop-filter: blur(50px) !important;"></div>
@@ -131,13 +131,13 @@
                 <div id="Buttons_Panel_Mobile" class="d-flex justify-content-between align-items-center">
                     <!-- <button id="" class="btnItmem mb-1 btn text-light border-1 border-light" width="50px" alt="" onclick="AddItemFull_Image1()">+1 Full</button> -->
                     <!-- <button id="" class="btnItmem mb-1 btn text-light border-1 border-light" width="50px" alt="" onclick="Add_4_Random()">+ R5 items</button> -->
-                    <button id="AddBubbles_Btn_Mobile" class="btnItmem mb-1 btn bg-primary text-light border-1 border-light" width="50px" alt="" onclick="AddBubbles(); BubbleGetSize()"><span>Bubbles</span><img id="AddBubbles_Btn_Cont1" src="img/bubbles_transparent.png"></button>
+                    <button id="AddBubbles_Btn_Mobile" class="btnItmem mb-1 btn bg-primary text-light border-1 border-light" width="50px" alt="" onclick="AddBubbles_Mobile(); BubbleGetSize()"><span>Bubbles</span><img id="AddBubbles_Btn_Cont1" src="img/bubbles_transparent.png"></button>
                     <button id="Sound_Btn_Mobile" class="btnItmem btn btn-primarytext-light border-1 border-light" width="50px" onclick="TurnSound(); Animate_Images();" style=""><span>Play Sound</span><img id="Sound_Btn_Cont1" src="img/sound_on.png"></button>
                     <button id="Light_Switch_Mobile" class="btnItmem btn btn-dark text-light border-1 border-light" width="50px" onclick="Switch_Light()"><span>Lights On</span><img id="Light_Switch_Cont1" src="img/switch_light_off.png"></button>
                     <button id="clear_items_Mobile" class="btnItmem mb-5 btn btn-warning border-1 border-light" width="50px" alt="" onclick="RemoveItems()">Clear items</button>
                 </div>
             </div>
-            <button id="AddSmItemBtn_Mobile" class="btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Add_ItemSmall_Random_Mobile()" style="width: 100px; height: 100px; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span class="fs-3">+1</span><br>random</button>
+            <button id="AddSmItemBtn_Mobile" class="btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Add_ItemSmall_Random_Mobile()" style="z-index: 12005; width: 100px; height: 100px; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span class="fs-3">+1</span><br>random</button>
             <button id="Collapse_MobilePanel_Btn" class="d-md-none btnItmem mb-1 btn btn-danger rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Collapse_MobilePanel()" type="button" data-bs-toggle="collapse" data-bs-target="#_none_Items_Panel_Mobile" aria-expanded="false" aria-controls="Items_Panel_Mobile" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span>X</span></button>
             <button id="UnCollapse_MobilePanel_Btn" class="d-none d-md-none btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="UnCollapse_MobilePanel()" type="button" data-bs-toggle="collapse" data-bs-target="#_none_Items_Panel_Mobile" aria-expanded="true" aria-controls="Items_Panel_Mobile" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span>^</span></button>
             <button id="HomePage_Btn" class="d-md-none btnItmem mb-1 btn btn-primary border-4 border-light text-light fw-bold" alt="" onclick="HomePage()" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span></span></button>
@@ -614,9 +614,9 @@
     let B_Width_T2 ; // incr from 50to100
     let B_BlockSize;  // incr from 50to100
     function BubbleGetSize(){
-            B_Width = Math.floor(Math.random() * 30) + 5;
-            B_B_Width_T2 = Math.floor(Math.random() * 30) + 10;
-            B_BlockSize = Math.floor(Math.random() * 30) + 5;
+            B_Width = Math.floor(Math.random() * 15) + 5;
+            B_B_Width_T2 = Math.floor(Math.random() * 25) + 10;
+            B_BlockSize = Math.floor(Math.random() * 25) + 5;
         return B_Width, B_BlockSize, B_Width_T2
         }
 
@@ -710,6 +710,127 @@
 
 
 </script>
+
+<script>
+    let BubbleCounter_mob = 1;
+    function AddBubbles_Mobile(){
+        do{
+            AddBubblesCreation_Mobile();
+            BubbleCounter++;
+        }while(BubbleCounter < 30);
+        //TO DO
+        // for (let index = 0; index < array.length; index++) {
+        //     const element = array[index];
+            
+        // }
+        document.getElementById("Sound_Btn_Cont1").src = "img/sound_on.png";
+
+    }
+
+    let B_Width_mob ; // incr from 50to100
+    let B_Width_T2_mob ; // incr from 50to100
+    let B_BlockSize_mob;  // incr from 50to100
+    function BubbleGetSize_mob(){
+            B_Width = Math.floor(Math.random() * 6) + 3;
+            B_B_Width_T2 = Math.floor(Math.random() * 8) + 3;
+            B_BlockSize = Math.floor(Math.random() * 8) + 3;
+        return B_Width, B_BlockSize, B_Width_T2
+        }
+
+    function AddBubblesCreation_Mobile(){
+        var CreateDivElement_Place1 = document.createElement('div');
+        var CreateDivElement_Place2 = document.createElement('div');
+        var CreateDivElement_Place3 = document.createElement('div');
+        var CreateDivElement_Place4 = document.createElement('div');
+        var CreateDivElement_Place5 = document.createElement('div');
+        var CreateDivElement_Place6 = document.createElement('div');
+        var CreateDivElement_Place7 = document.createElement('div');
+        var CreateDivElement_Place8 = document.createElement('div');
+
+        BubbleGetSize_mob();
+        SetID++;
+
+        // var type1; var type2; var type3; var type4; var type5; var type6; var type7; var type8;
+        // SetXY();
+        // set_X = 200;
+        // set_Y = 250;
+
+        CreateDivElement_Place1.setAttribute("class", "rounded-circle bubbles bubblesAnimation_mobile");
+        CreateDivElement_Place1.setAttribute("style", "margin-left:5% border: 1px solid white; width:10px !important; block-size: 10px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+
+        CreateDivElement_Place2.setAttribute("class", "rounded-circle bubbles bubblesAnimation_2_mobile");
+        CreateDivElement_Place2.setAttribute("style", "margin-left:10%; border: 1px solid white; width:"+ B_Width_T2 +"px !important; block-size: " + B_Width_T2 + "px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+
+        CreateDivElement_Place3.setAttribute("class", "rounded-circle bubbles bubblesAnimation_mobile");
+        CreateDivElement_Place3.setAttribute("style", "margin-left:12%; border: 1px solid white; width:"+ B_Width +"px !important; block-size: " + B_Width + "px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+        
+        CreateDivElement_Place4.setAttribute("class", "rounded-circle bubbles bubblesAnimation_2_mobile");
+        CreateDivElement_Place4.setAttribute("style", "margin-left:25%; margin-bottom 50px; border: 1px solid white; width:"+ B_Width +"px !important; block-size: " + B_Width + "px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+        
+        CreateDivElement_Place5.setAttribute("class", "rounded-circle bubbles bubblesAnimation_mobile");
+        CreateDivElement_Place5.setAttribute("style", "margin-left:35%; border: 1px solid white; width:"+ B_Width_T2 +"px !important; block-size: " + B_Width_T2 + "px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+
+        CreateDivElement_Place6.setAttribute("class", "rounded-circle bubbles bubblesAnimation_2_mobile");
+        CreateDivElement_Place6.setAttribute("style", "margin-left:45%; border: 1px solid white; width:"+ B_Width +"px !important; block-size: " + B_Width + "px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+
+        CreateDivElement_Place7.setAttribute("class", "rounded-circle bubbles bubblesAnimation_mobile");
+        CreateDivElement_Place7.setAttribute("style", "margin-left:50%; border: 1px solid white; width:"+ B_Width +"px !important; block-size: " + B_Width + "px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+
+        CreateDivElement_Place8.setAttribute("class", "rounded-circle bubbles bubblesAnimation_2_mobile");
+        CreateDivElement_Place8.setAttribute("style", "margin-left:65%; border: 1px solid white; width:"+ B_Width_T2 +"px !important; block-size: " + B_Width_T2 + "px !important; position: absolute; left:" + set_X + "px; top:" + set_Y + "px;" );
+        
+
+        SetXY();
+        // BoxConteiner.appendChild(CreateDivElement);
+        // BoxConteiner.appendChild(CreateDivElement_Place2);
+        // BoxConteiner.appendChild(CreateDivElement_Place3);
+        // BoxConteiner.appendChild(CreateDivElement_Place4);
+        // BoxConteiner.appendChild(CreateDivElement_Place5);
+        // BoxConteiner.appendChild(CreateDivElement_Place6);
+        // BoxConteiner.appendChild(CreateDivElement_Place7);
+        // BoxConteiner.appendChild(CreateDivElement_Place8);
+        ////alternate ^        
+
+        var ArrItem01 =  BoxConteiner.appendChild(CreateDivElement_Place1); 
+        var ArrItem02 =  BoxConteiner.appendChild(CreateDivElement_Place2);
+        var ArrItem03 =  BoxConteiner.appendChild(CreateDivElement_Place3);
+        var ArrItem04 =  BoxConteiner.appendChild(CreateDivElement_Place4); 
+        var ArrItem05 =  BoxConteiner.appendChild(CreateDivElement_Place5);
+        var ArrItem06 =  BoxConteiner.appendChild(CreateDivElement_Place6);
+        var ArrItem07 =  BoxConteiner.appendChild(CreateDivElement_Place7);
+        var ArrItem08 =  BoxConteiner.appendChild(CreateDivElement_Place8);
+
+        let LimitCounter = 8;
+        var array_8 = [8];
+
+        array_8 =  {
+         ArrItem01 ,   
+         ArrItem02 ,
+         ArrItem03 ,
+         ArrItem04 ,
+         ArrItem05 ,
+         ArrItem06 ,
+         ArrItem07 ,
+         ArrItem08      
+        }
+        for (let index = 0; index < LimitCounter; index++) {
+        // var element = array_8[index];
+        SetXY();
+        // BoxConteiner.appendChild(array_8[index]);
+        BoxConteiner.appendChild(array_8[0]);
+        BoxConteiner.appendChild(array_8[1]);
+        BoxConteiner.appendChild(array_8[2]);
+        BoxConteiner.appendChild(array_8[3]);
+        BoxConteiner.appendChild(array_8[4]);
+        BoxConteiner.appendChild(array_8[5]);
+        BoxConteiner.appendChild(array_8[6]);
+        BoxConteiner.appendChild(array_8[7]);
+        }   
+    }
+
+</script>
+
+
 <script>
     //Sounds/////////////////////////////////////////////////////////////////////////////////
     let StateID = 1;
