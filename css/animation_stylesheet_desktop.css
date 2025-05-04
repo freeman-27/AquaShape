@@ -1,6 +1,15 @@
 .LightOn{
+    display: block;
+}
+.LightYellow{
     /* box-shadow: 0 0px 24px 32px rgba(166, 255, 0, 0.76), 0 0px 60px 65px rgba(255, 255, 255, 0.4); */
-    box-shadow: 0 0px 240px 320px rgba(166, 255, 0, 0.76), 0 0px 600px 750px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0px 240px 320px rgba(205, 255, 113, 0.76), 0 0px 600px 750px rgba(255, 255, 255, 0.4) !important;
+}
+.LightRed{
+    box-shadow: 0 0px 240px 320px rgba(255, 156, 156, 0.76), 0 0px 600px 750px rgba(255, 255, 255, 0.4) !important;
+}
+.LightPurple{
+    box-shadow: 0 0px 240px 320px rgba(121, 228, 255, 0.76), 0 0px 600px 750px rgba(255, 255, 255, 0.4) !important;
 }
 
 .itemsAnimation_V1{
