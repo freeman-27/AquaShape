@@ -20,12 +20,12 @@ body{
     outline-color: black !important;
 }
 
-#BoxCoverBack, #BoxCoverMiddle, #BoxCoverFront {
+#BoxCoverBack, #BoxCoverMiddle, #BoxCoverFront, #WaterFloorContent_forCube {
     width: 75%;
     left: auto;
     right: auto;
 }
-.BoxCoverBackSphere{
+.BoxCoverBackSphere {
     /* height: 85% !important; */
     width: 50% !important;
     /* background-color: rgba(0, 255, 106, 0.856) !important;  */ /*check value*/
@@ -35,6 +35,28 @@ body{
     top: 50px;
     scale: 0.8;
 }
+#WaterFloorContent_forSphere {
+    width: 50% !important;
+    position: absolute;
+    left: 25% !important;
+    top: 0;
+    scale: 0.8;
+}
+
+.BoxCoverBackDodecaedr, #WaterFloorContent_forDodecaedr {
+    /* height: 85% !important; */
+    width: 60% !important;
+    max-height:90%;
+    /* background-color: rgba(0, 255, 106, 0.856) !important;  */ /*check value*/
+    /* border-radius: 50%; */
+    left: 20% !important;
+    right: auto !important; 
+    top: 50px;
+    /* scale: 0.8; */
+}
+
+
+
 
 @media screen and (min-width: 801px) {
     body{
