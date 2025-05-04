@@ -99,7 +99,8 @@
                     <img id="BoxCoverMiddle" width="" src="img/aquacube_middlecontentview(100per)_and_ground.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 30005; opacity: 1; position: absolute;">
                     <img id="WaterFloorContent_forCube" class="d-none" src="img/aquacube_middle_Image_Extra_content_Type1.png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 35005; position: absolute; ">
                     <img id="BoxCoverFront" width="" src="img/aquacube_frontview(10per).png" alt="" ondragenter="animateFunction_ALL()" style="z-index: 90005; opacity: 0.8; position: absolute;">
-                    <div id="BoxBackConteiner" class="d-flex flex-wrap border border-1 border-secondary bg-transparent" style="width: 35%; block-size: 60%; border-style: dashed !important; z-index: 50005; margin-left: 20%; position: absolute; align-self: center; top:20%;">1</div>
+                    <!-- area for animation: -->
+                    <div id="BoxBackContainer" class="d-flex flex-wrap border border-1 border-secondary bg-transparent" style="width: 35%; block-size: 60%; border-style: dashed; z-index: 50005; margin-left: 20%; position: absolute; align-self: center; top:20%;"></div>
                     <div id="blurMask" class="" style="border: 0px dotted green; block-size: 55.5em; width: 100%; left:0%; top:50px; z-index: 1005 !important; position: absolute; -webkit-backdrop-filter: blur(50px) !important;
                     backdrop-filter: blur(50px) !important;"></div>
                     <!-- </div> -->
@@ -114,14 +115,14 @@
                 <div id="Buttons_Panel" class="d-flex flex-column justify-content-between align-items-center">
                     <!-- <button id="" class="btnItmem mb-1 btn text-light border-1 border-light" width="50px" alt="" onclick="AddItemFull_Image1()">+1 Full</button> -->
                     <!-- <button id="" class="btnItmem mb-1 btn text-light border-1 border-light" width="50px" alt="" onclick="Add_4_Random()">+ R5 items</button> -->
-                    <button id="AddBubbles_Btn" class="btnItmem mb-1 btn bg-primary text-light border-1 border-light" width="50px" alt="" onclick="AddBubbles(); BubbleGetSize()"><span>Bubbles</span><img id="AddBubbles_Btn_Cont1" src="img/bubbles_transparent.png"></button>
-                    <button id="Sound_Btn" class="btnItmem btn btn-primarytext-light border-1 border-light" width="50px" onclick="TurnSound(); Animate_Images();" style=""><span>Play Sound</span><img id="Sound_Btn_Cont1" src="img/sound_on.png"></button>
-                    <button id="Light_Switch" class="btnItmem btn btn-dark text-light border-1 border-light" width="50px" onclick="Switch_Light()"><span>Lights On</span><img id="Light_Switch_Cont1" src="img/switch_light_off.png"></button>
-                    <button id="change_ColorLightID" class="btnItmem mb-5 btn btn-dark border-1 border-light" width="50px" alt="" onclick="ModifyStyle_LightSource()"><span class="d-none">Sw. Color</span><img id="change_form_Btn_Cont1" width="30px" class="border-light border rounded-circle" src="img/TypeColorForLightSource.png"></button>
-                    <button id="clear_items" class="btnItmem mb-5 btn btn-warning border-1 border-light" width="50px" alt="" onclick="RemoveItems()">Clear items</button>
-                    <button id="change_form_btn" class="btnItmem mb-5 btn btn-warning border-1 border-light" width="50px" alt="" onclick="ChangeAquaForm()"><span>Sw. Form</span><img id="change_form_Btn_Cont1" width="25px" src="img/switch_form_btn.png"></button>
-                    <button id="AddWaterFloorContent_Btn" class="btnItmem mb-1 btn bg-success text-light border-1 border-light" width="50px" alt="" onclick="Add_ContentToWaterFloor()"><span></span><img id="AddWaterFloorContent_Cont1" width="50px" height="40px" src="img/DecaedrShape_MiddleImage_WithContent_whiteBG.png"></button>
-                    <button id="AddSmItemBtn" class="btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Add_ItemSmall_Random()" style="width: 100px; height: 100px; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span class="fs-3">+1</span><br>random</button>
+                    <button id="AddBubbles_Btn" class="btnItmem mb-2 btn bg-primary text-light border-1 border-light" width="50px" alt="" onclick="AddBubbles(); BubbleGetSize()"><span>Bubbles</span><img id="AddBubbles_Btn_Cont1" src="img/bubbles_transparent.png"></button>
+                    <button id="Sound_Btn" class="btnItmem mb-2 btn btn-primarytext-light border-1 border-light" width="50px" onclick="TurnSound(); Animate_Images();" style=""><span>Play Sound</span><img id="Sound_Btn_Cont1" src="img/sound_on.png"></button>
+                    <button id="Light_Switch" class="btnItmem mb-2 btn text-light border-1 border-light" width="50px" onclick="Switch_Light()"><span>Lights On</span><img id="Light_Switch_Cont1" src="img/switch_light_off.png"></button>
+                    <button id="change_ColorLightID" class="btnItmem mb-2 btn border-1 border-light" width="50px" alt="" onclick="ModifyStyle_LightSource()"><span class="d-none">Sw. Color</span><img id="change_form_Btn_Cont1" width="30px" class="border-light border rounded-circle" src="img/TypeColorForLightSource.png"></button>
+                    <button id="clear_items" class="btnItmem mb-2 btn border-1 border-light px-3" width="50px" alt="" onclick="RemoveItems()" style="background: #8d6060;"><span class="d-none">Clear items</span><img id="AddWaterFloorContent_Cont1" width="40px" height="40px" class="border border-1 rounded-circle border-light" src="img/RemoveAll_ItemsBtn_2.png"></button>
+                    <button id="change_form_btn" class="btnItmem mb-2 btn btn-primary border-1 border-light" width="50px" alt="" onclick="ChangeAquaForm()"><span class="d-none">Sw. Form</span><img id="AddWaterFloorContent_Cont1" width="50px" height="40px" src="img/DecaedrShape_MiddleImage_WithContent_whiteBG.png"></button>
+                    <button id="AddWaterFloorContent_Btn" class="btnItmem mb-2 btn bg-primary text-light border-1 border-light px-3" width="50px" alt="" onclick="Add_ContentToWaterFloor()"><span></span><img id="AddWaterFloorContent_Cont1" class="rounded-circle border border-light" width="40px" height="40px" src="img/AddFloorContentCircleBtn.png"></button>
+                    <button id="AddSmItemBtn" class="btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Add_ItemSmall_Random()" style="width: 100px; height: 100px; text-shadow: 0 0 10px yellowgreen, 0 0 20px white; background-image: url('img/RandomFishesCircle.png'); background-size: cover; background-repeat: no-repeat;"><span class="fs-4">+1</span><br><span class="d-none">random</span></button>
                 </div>
             </div>
             <div id="Items_Panel_Mobile" class="d-md-none d-flex flex-wrap fixed-bottom justify-content-between align-items-center border-warning border-2 border bg-secondary"  style="z-index: 120005; width: fit-content; block-size: 200px; position: absolute; right: 0; bottom:0;">
@@ -140,7 +141,7 @@
                     <button id="clear_items_Mobile" class="btnItmem mb-5 btn btn-warning border-1 border-light" width="50px" alt="" onclick="RemoveItems()">Clear items</button>
                 </div>
             </div>
-            <button id="AddSmItemBtn_Mobile" class="btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Add_ItemSmall_Random_Mobile()" style="z-index: 12005; width: 100px; height: 100px; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span class="fs-3">+1</span><br>random</button>
+            <button id="AddSmItemBtn_Mobile" class="btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Add_ItemSmall_Random_Mobile()" style="z-index: 12005; width: 100px; height: 100px; text-shadow: 0 0 10px yellowgreen, 0 0 20px white; background-image: url('img/RandomFishesCircle.png'); background-size: cover; background-repeat: no-repeat;"><span class="fs-4">+1</span><br><span class="d-none">random</span></button>
             <button id="Collapse_MobilePanel_Btn" class="d-md-none btnItmem mb-1 btn btn-danger rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Collapse_MobilePanel()" type="button" data-bs-toggle="collapse" data-bs-target="#_none_Items_Panel_Mobile" aria-expanded="false" aria-controls="Items_Panel_Mobile" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span>X</span></button>
             <button id="UnCollapse_MobilePanel_Btn" class="d-none d-md-none btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="UnCollapse_MobilePanel()" type="button" data-bs-toggle="collapse" data-bs-target="#_none_Items_Panel_Mobile" aria-expanded="true" aria-controls="Items_Panel_Mobile" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span>^</span></button>
             <button id="HomePage_Btn" class="d-md-none btnItmem mb-1 btn btn-primary border-4 border-light text-light fw-bold" alt="" onclick="HomePage()" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span></span></button>
@@ -244,8 +245,8 @@
 <script>
     //Animation/////////////////////////////////////////////////////////////////////////////////
     let E1 = document.getElementById("proto_1");
-    // let BoxConteiner = document.getElementById("BoxConteiner");
-    let BoxConteiner = document.getElementById("BoxBackConteiner");
+    // let BoxContainer = document.getElementById("BoxContainer");
+    let BoxContainer = document.getElementById("BoxBackContainer");
     // let InputProto1 = ImageBitmap;
     let InputProto1 = document.createElement("img").src = "img/proto_3.jpg";
     
@@ -336,44 +337,44 @@
     }
 
     function animateFunction_ALL(){
-        BoxConteiner.classList.add("border", "border-4");
+        BoxContainer.classList.add("border", "border-4");
         if (refer_instance_1 === check_1){
             inputObj_instance = source_1;
-            // BoxConteiner.innerHTML = '<img id="proto_1" class="dropContent" width="5%" src="'+ inputObj_instance +'" alt="">';
-            BoxConteiner.append(item_1);
+            // BoxContainer.innerHTML = '<img id="proto_1" class="dropContent" width="5%" src="'+ inputObj_instance +'" alt="">';
+            BoxContainer.append(item_1);
             item_1.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
         } 
         if (refer_instance_2 === check_2){
             inputObj_instance = source_2;
-            BoxConteiner.append(item_2);
+            BoxContainer.append(item_2);
             item_2.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
         } else if (refer_instance_3 === check_3){
             inputObj_instance = source_3;
-            BoxConteiner.append(item_3);
+            BoxContainer.append(item_3);
             item_3.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
         } else if (refer_instance_4 === check_4){
             inputObj_instance = source_4;
-            BoxConteiner.append(item_4);
+            BoxContainer.append(item_4);
             item_4.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
-            // BoxConteiner.append(item_F4.Source);
-            // BoxConteiner.append(append_I4);
-            // BoxConteiner.append(item_1, item_2, item_3);
+            // BoxContainer.append(item_F4.Source);
+            // BoxContainer.append(append_I4);
+            // BoxContainer.append(item_1, item_2, item_3);
         }
     }
     // function Add_4_Random(){
-    //         BoxConteiner.append(item_1);
+    //         BoxContainer.append(item_1);
     //         inputObj_instance = source_1;
     //         item_1.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
 
-    //         BoxConteiner.append(item_2);
+    //         BoxContainer.append(item_2);
     //         inputObj_instance = source_2;
     //         item_2.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
 
-    //         BoxConteiner.append(item_3);
+    //         BoxContainer.append(item_3);
     //         inputObj_instance = source_3;
     //         item_3.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
 
-    //         BoxConteiner.append(item_4);
+    //         BoxContainer.append(item_4);
     //         inputObj_instance = source_4;
     //         item_4.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ inputObj_instance +'" alt="">';
     // }
@@ -393,7 +394,7 @@
             CreateImageElement.setAttribute("width", "70px");
 
             CreateDivElement.appendChild(CreateImageElement);
-            BoxConteiner.append(CreateDivElement);
+            BoxContainer.append(CreateDivElement);
             SetID++;
     }
     function AddItem_Type1_Mobile(){
@@ -414,7 +415,7 @@
             CreateImageElement.setAttribute("width", "70px");
 
             CreateDivElement.appendChild(CreateImageElement);
-            BoxConteiner.append(CreateDivElement);
+            BoxContainer.append(CreateDivElement);
             SetID++;
     }
     function AddItem_Type2(){
@@ -432,7 +433,7 @@
             CreateImageElement.setAttribute("width", "70px");
 
             CreateDivElement.appendChild(CreateImageElement);
-            BoxConteiner.append(CreateDivElement);
+            BoxContainer.append(CreateDivElement);
             SetID++;
     }
     function AddItem_Type2_Mobile(){
@@ -452,7 +453,7 @@
             CreateImageElement.setAttribute("width", "70px");
 
             CreateDivElement.appendChild(CreateImageElement);
-            BoxConteiner.append(CreateDivElement);
+            BoxContainer.append(CreateDivElement);
             SetID++;
     }
     function AddItem_Type3(){
@@ -470,7 +471,7 @@
             CreateImageElement.setAttribute("width", "70px");
 
             CreateDivElement.appendChild(CreateImageElement);
-            BoxConteiner.append(CreateDivElement);
+            BoxContainer.append(CreateDivElement);
             SetID++;
     }
     function AddItem_Type3_Mobile(){
@@ -490,7 +491,7 @@
             CreateImageElement.setAttribute("width", "70px");
 
             CreateDivElement.appendChild(CreateImageElement);
-            BoxConteiner.append(CreateDivElement);
+            BoxContainer.append(CreateDivElement);
             SetID++;
     }
     function AddItem_Type4(){
@@ -508,7 +509,7 @@
             CreateImageElement.setAttribute("width", "70px");
 
             CreateDivElement.appendChild(CreateImageElement);
-            BoxConteiner.append(CreateDivElement);
+            BoxContainer.append(CreateDivElement);
             SetID++;
     }
     function AddItem_Type4_Mobile(){
@@ -528,7 +529,7 @@
             CreateImageElement.setAttribute("width", "70px");
 
             CreateDivElement.appendChild(CreateImageElement);
-            BoxConteiner.append(CreateDivElement);
+            BoxContainer.append(CreateDivElement);
             SetID++;
     }
 
@@ -552,7 +553,7 @@
     let SetID = 1;
     let Item_Image1 = '<div id="'+ SetID +'" class="border-2 border-light rounded-circle" width="50px" ><img src="proto_4.jpg" style="position: relative; width: cover;"></div>';
     function AddItemFull_Image1(){
-        BoxConteiner.innerHTML = Item_Image1;
+        BoxContainer.innerHTML = Item_Image1;
         SetID++;
     }
     let ItemsLimit = 0;
@@ -574,18 +575,18 @@
     function Add_ItemSmall_Random(){
         
         let input_instance_from_src = source_2;
-        // BoxConteiner.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ input_instance_from_src +'" alt="">';
-        // BoxConteiner.innerHTML = '<div id="'+ SetID +'" class="border-2 border-light rounded-circle" width="50px" ><img src="'+ input_instance_from_src +'" style="position: relative; width: 50px;"></div>';
+        // BoxContainer.innerHTML = '<img id="" class="dropContent" width="75px" src="'+ input_instance_from_src +'" alt="">';
+        // BoxContainer.innerHTML = '<div id="'+ SetID +'" class="border-2 border-light rounded-circle" width="50px" ><img src="'+ input_instance_from_src +'" style="position: relative; width: 50px;"></div>';
 
         // try {
-        // BoxConteiner.appendChild(document.createElement("button"));
+        // BoxContainer.appendChild(document.createElement("button"));
         // i++;
         // } catch (error) {
         //     window.alert("StackOverflow");
         // }
 
-        // BoxConteiner.appendChild(document.createElement("button"));
-        // BoxConteiner.innerHTML = '<div id="'+ SetID +'" class="border-2 border-light rounded-circle" width="50px" ><img src="'+ input_instance_from_src +'" style="position: relative; width: 50px;"></div>';
+        // BoxContainer.appendChild(document.createElement("button"));
+        // BoxContainer.innerHTML = '<div id="'+ SetID +'" class="border-2 border-light rounded-circle" width="50px" ><img src="'+ input_instance_from_src +'" style="position: relative; width: 50px;"></div>';
         SetID++;
 
 
@@ -622,8 +623,8 @@
         // CreateImageElement.appendChild('<img src="proto_2.jpg">');
         // CreateImageElement.setAttribute.style = "border: 2px solid red; width: 50px; block-size: 50px";
         // CreateImageElement.setAttribute.width = "50px";
-        // BoxConteiner.appendChild(CreateNewElement);
-        BoxConteiner.appendChild(CreateDivElement);
+        // BoxContainer.appendChild(CreateNewElement);
+        BoxContainer.appendChild(CreateDivElement);
 
         if (ItemsLimit == 0){
         ItemsLimit = 1;
@@ -663,7 +664,7 @@
         CreateImageElement.setAttribute("width", "70px");
         
         CreateDivElement.appendChild(CreateImageElement);
-        BoxConteiner.appendChild(CreateDivElement);
+        BoxContainer.appendChild(CreateDivElement);
 
         if (ItemsLimit == 0){
         ItemsLimit = 1;
@@ -756,24 +757,24 @@
         
 
         SetXY();
-        // BoxConteiner.appendChild(CreateDivElement);
-        // BoxConteiner.appendChild(CreateDivElement_Place2);
-        // BoxConteiner.appendChild(CreateDivElement_Place3);
-        // BoxConteiner.appendChild(CreateDivElement_Place4);
-        // BoxConteiner.appendChild(CreateDivElement_Place5);
-        // BoxConteiner.appendChild(CreateDivElement_Place6);
-        // BoxConteiner.appendChild(CreateDivElement_Place7);
-        // BoxConteiner.appendChild(CreateDivElement_Place8);
+        // BoxContainer.appendChild(CreateDivElement);
+        // BoxContainer.appendChild(CreateDivElement_Place2);
+        // BoxContainer.appendChild(CreateDivElement_Place3);
+        // BoxContainer.appendChild(CreateDivElement_Place4);
+        // BoxContainer.appendChild(CreateDivElement_Place5);
+        // BoxContainer.appendChild(CreateDivElement_Place6);
+        // BoxContainer.appendChild(CreateDivElement_Place7);
+        // BoxContainer.appendChild(CreateDivElement_Place8);
         ////alternate ^        
 
-        var ArrItem01 =  BoxConteiner.appendChild(CreateDivElement); 
-        var ArrItem02 =  BoxConteiner.appendChild(CreateDivElement_Place2);
-        var ArrItem03 =  BoxConteiner.appendChild(CreateDivElement_Place3);
-        var ArrItem04 =  BoxConteiner.appendChild(CreateDivElement_Place4); 
-        var ArrItem05 =  BoxConteiner.appendChild(CreateDivElement_Place5);
-        var ArrItem06 =  BoxConteiner.appendChild(CreateDivElement_Place6);
-        var ArrItem07 =  BoxConteiner.appendChild(CreateDivElement_Place7);
-        var ArrItem08 =  BoxConteiner.appendChild(CreateDivElement_Place8);
+        var ArrItem01 =  BoxContainer.appendChild(CreateDivElement); 
+        var ArrItem02 =  BoxContainer.appendChild(CreateDivElement_Place2);
+        var ArrItem03 =  BoxContainer.appendChild(CreateDivElement_Place3);
+        var ArrItem04 =  BoxContainer.appendChild(CreateDivElement_Place4); 
+        var ArrItem05 =  BoxContainer.appendChild(CreateDivElement_Place5);
+        var ArrItem06 =  BoxContainer.appendChild(CreateDivElement_Place6);
+        var ArrItem07 =  BoxContainer.appendChild(CreateDivElement_Place7);
+        var ArrItem08 =  BoxContainer.appendChild(CreateDivElement_Place8);
 
         let LimitCounter = 8;
         var array_8 = [8];
@@ -791,15 +792,15 @@
         for (let index = 0; index < LimitCounter; index++) {
         // var element = array_8[index];
         SetXY();
-        // BoxConteiner.appendChild(array_8[index]);
-        BoxConteiner.appendChild(array_8[0]);
-        BoxConteiner.appendChild(array_8[1]);
-        BoxConteiner.appendChild(array_8[2]);
-        BoxConteiner.appendChild(array_8[3]);
-        BoxConteiner.appendChild(array_8[4]);
-        BoxConteiner.appendChild(array_8[5]);
-        BoxConteiner.appendChild(array_8[6]);
-        BoxConteiner.appendChild(array_8[7]);
+        // BoxContainer.appendChild(array_8[index]);
+        BoxContainer.appendChild(array_8[0]);
+        BoxContainer.appendChild(array_8[1]);
+        BoxContainer.appendChild(array_8[2]);
+        BoxContainer.appendChild(array_8[3]);
+        BoxContainer.appendChild(array_8[4]);
+        BoxContainer.appendChild(array_8[5]);
+        BoxContainer.appendChild(array_8[6]);
+        BoxContainer.appendChild(array_8[7]);
         }   
     }
 
@@ -876,24 +877,24 @@
         
 
         SetXY();
-        // BoxConteiner.appendChild(CreateDivElement);
-        // BoxConteiner.appendChild(CreateDivElement_Place2);
-        // BoxConteiner.appendChild(CreateDivElement_Place3);
-        // BoxConteiner.appendChild(CreateDivElement_Place4);
-        // BoxConteiner.appendChild(CreateDivElement_Place5);
-        // BoxConteiner.appendChild(CreateDivElement_Place6);
-        // BoxConteiner.appendChild(CreateDivElement_Place7);
-        // BoxConteiner.appendChild(CreateDivElement_Place8);
+        // BoxContainer.appendChild(CreateDivElement);
+        // BoxContainer.appendChild(CreateDivElement_Place2);
+        // BoxContainer.appendChild(CreateDivElement_Place3);
+        // BoxContainer.appendChild(CreateDivElement_Place4);
+        // BoxContainer.appendChild(CreateDivElement_Place5);
+        // BoxContainer.appendChild(CreateDivElement_Place6);
+        // BoxContainer.appendChild(CreateDivElement_Place7);
+        // BoxContainer.appendChild(CreateDivElement_Place8);
         ////alternate ^        
 
-        var ArrItem01 =  BoxConteiner.appendChild(CreateDivElement_Place1); 
-        var ArrItem02 =  BoxConteiner.appendChild(CreateDivElement_Place2);
-        var ArrItem03 =  BoxConteiner.appendChild(CreateDivElement_Place3);
-        var ArrItem04 =  BoxConteiner.appendChild(CreateDivElement_Place4); 
-        var ArrItem05 =  BoxConteiner.appendChild(CreateDivElement_Place5);
-        var ArrItem06 =  BoxConteiner.appendChild(CreateDivElement_Place6);
-        var ArrItem07 =  BoxConteiner.appendChild(CreateDivElement_Place7);
-        var ArrItem08 =  BoxConteiner.appendChild(CreateDivElement_Place8);
+        var ArrItem01 =  BoxContainer.appendChild(CreateDivElement_Place1); 
+        var ArrItem02 =  BoxContainer.appendChild(CreateDivElement_Place2);
+        var ArrItem03 =  BoxContainer.appendChild(CreateDivElement_Place3);
+        var ArrItem04 =  BoxContainer.appendChild(CreateDivElement_Place4); 
+        var ArrItem05 =  BoxContainer.appendChild(CreateDivElement_Place5);
+        var ArrItem06 =  BoxContainer.appendChild(CreateDivElement_Place6);
+        var ArrItem07 =  BoxContainer.appendChild(CreateDivElement_Place7);
+        var ArrItem08 =  BoxContainer.appendChild(CreateDivElement_Place8);
 
         let LimitCounter = 8;
         var array_8 = [8];
@@ -911,15 +912,15 @@
         for (let index = 0; index < LimitCounter; index++) {
         // var element = array_8[index];
         SetXY();
-        // BoxConteiner.appendChild(array_8[index]);
-        BoxConteiner.appendChild(array_8[0]);
-        BoxConteiner.appendChild(array_8[1]);
-        BoxConteiner.appendChild(array_8[2]);
-        BoxConteiner.appendChild(array_8[3]);
-        BoxConteiner.appendChild(array_8[4]);
-        BoxConteiner.appendChild(array_8[5]);
-        BoxConteiner.appendChild(array_8[6]);
-        BoxConteiner.appendChild(array_8[7]);
+        // BoxContainer.appendChild(array_8[index]);
+        BoxContainer.appendChild(array_8[0]);
+        BoxContainer.appendChild(array_8[1]);
+        BoxContainer.appendChild(array_8[2]);
+        BoxContainer.appendChild(array_8[3]);
+        BoxContainer.appendChild(array_8[4]);
+        BoxContainer.appendChild(array_8[5]);
+        BoxContainer.appendChild(array_8[6]);
+        BoxContainer.appendChild(array_8[7]);
         }   
     }
 
@@ -1429,7 +1430,7 @@ function Add_ContentToWaterFloor(){
 
 
 function RemoveItems(){
-            BoxConteiner.innerHTML = "";
+            BoxContainer.innerHTML = "";
             RoolElement.disabled=false;
             ItemsLimit = 0;
             RoolElement.classList.remove("bg-transparent");

@@ -189,14 +189,14 @@
 
 /*Animation TYPES*/
 .Mobile_itemsAnimation_V1{
-    /* border: 1px dotted rgb(60, 139, 23) !important; */
+    border: 0px dotted rgb(60, 139, 23) !important;
     animation-name: MoveImageItems_mobile_A1;
     animation-duration: 20s;
     animation-iteration-count: infinite;
     position: absolute;
 }
 .Mobile_itemsAnimation_V2 {
-    /* border: 1px dotted rgb(253, 178, 178) !important; */
+    border: 0px dotted rgb(253, 178, 178) !important;
     animation-name: MoveImageItems_mobile_A2;
     animation-duration: 15s;
     animation-delay: 2s;
@@ -204,7 +204,7 @@
     position: absolute;
 }
 .Mobile_itemsAnimation_V3 {
-    /* border: 1px dotted rgb(177, 42, 42) !important; */
+    border: 0px dotted rgb(177, 42, 42) !important;
     animation-name: MoveImageItems_mobile_A3;
     animation-duration: 15s;
     animation-delay: 1s;
@@ -212,7 +212,7 @@
     position: absolute;
 }
 .Mobile_itemsAnimation_V4 {
-    /* border: 1px dotted rgb(44, 42, 177) !important; */
+    border: 0px dotted rgb(44, 42, 177) !important;
     animation-name: MoveImageItems_mobile_A4;
     animation-duration: 15s;
     animation-delay: 1s;
@@ -220,7 +220,7 @@
     position: absolute;
 }
 .Mobile_itemsAnimation_V5 {
-    /* border: 1px dotted rgb(229, 255, 0) !important; */
+    border: 0px dotted rgb(229, 255, 0) !important;
     animation-name: MoveImageItems_mobile_A5;
     animation-duration: 15s;
     animation-delay: 1s;
