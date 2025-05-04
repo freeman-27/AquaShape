@@ -28,7 +28,7 @@
         <canvas id="MainBGitem" class="" style="border: 2px solid red ; z-index: -2; position: absolute; background: url('img/CustomBackground/forBlurBackground_sized_Cobalt.png'); background-size: 65%, 80%; background-position-x: 50%; background-position-y: 5em; background-repeat: no-repeat; opacity: 0.5; width: 98%; height: 98%;"></canvas>
 
         <div class="container-fuild" style="z-index: 250005 !important;">
-            <h1 class="bg-black text-light text-center" onclick="ChangeAquaForm()">AquaBox Web</h1>
+            <h1 class="bg-black text-light text-center" onclick="ChangeAquaForm()">AquaShape Web</h1>
             <div id="testItem"><img id="" class="d-none d-md-block mb-4 dropContent" width="50px" src="img/aquacube_content_image_r2.ico" alt="" style="position: absolute; left: 50px; top:0;"></div>
             <button class="d-none d-md-block btn text-light ms-5" onclick="HomePage()" style="z-index: 13005; position: relative;">go home page</button>
             <!-- sticky menu block | no fixated -->
@@ -974,9 +974,11 @@ function openStickyMenu(){
     let SourseBG_2_p2 = "img/aquaSphere_MiddleImage-Contur_withGroundAndContent.png";
     let SourseBG_2_p3 = "img/aquaSphere_FrontImage(100per).png";
     // Images Type 3:
-    let SourseBG_3_p1 = "img/DecaedrShape_Background_GreenMeshGradient.png";
-    let SourseBG_3_p2 = "img/DecaedrShape_MiddleImage_WithContent.png";
-    let SourseBG_3_p3 = "img/DecaedrShape_FrontImage_White_noBackgr.png";
+    let SourseBG_3_p1 = "img/DecaedrShape_BackgroundEdges_andFloor_andMeshGradient.png";
+    // let SourseBG_3_p1 = "img/DecaedrShape_Background_GreenMeshGradient.png";
+    let SourseBG_3_p2 = "img/DecaedrShape_MiddleImage_Grass.png";
+    // let SourseBG_3_p2 = "img/DecaedrShape_MiddleImage_WithContent.png";
+    let SourseBG_3_p3 = "img/DecaedrShape_FrontImage_Glass_transparent.png";
     // Images Type 4:
     let SourseBG_4_p1 = "img/IcoShpereGlass_ZeroBack_Layer_MeshGradient_Light.png";
     let SourseBG_4_p2 = "img/IcoShpereGlass_Middle_Layer_Edges.png";
@@ -1086,7 +1088,7 @@ function Delete_MainItemBG(){
             //floor content image (hidden by default):
             PrepareExtraContent_forSphere.setAttribute("id", "WaterFloorContent_forSphere");
             PrepareExtraContent_forSphere.setAttribute("src", "img/aquaSphere_MiddleImage_ExtraContent_Type1.png");
-            PrepareExtraContent_forSphere.setAttribute("style", "z-index: 40005; opacity: 1; position: absolute;"); // for shpere - type1 //default
+            PrepareExtraContent_forSphere.setAttribute("style", "z-index: 40005; opacity: 1; position: absolute;  scale: 0.70;"); // for shpere - type1 //default
             PrepareExtraContent_forSphere.setAttribute("class", "d-none"); //default
             // PrepareExtraContent_forSphere.setAttribute("hidden", "hidden"); //default
 
@@ -1121,13 +1123,13 @@ function Delete_MainItemBG(){
             ReplaceImg_T3_p2 = document.createElement('img');
             ReplaceImg_T3_p2.setAttribute('id', 'BoxCoverMiddle');
             ReplaceImg_T2_p2.setAttribute('class', 'BoxCoverBackDodecaedr');
-            ReplaceImg_T3_p2.setAttribute('style', 'z-index: 30005; opacity: 1; position: absolute; width: 60%; max-height:90%; left: 20%; right: auto; top: 50px;');
+            ReplaceImg_T3_p2.setAttribute('style', 'z-index: 45005; opacity: 1; position: absolute; width: 60%; max-height:90%; left: 20%; right: auto; top: 50px;');
             ReplaceImg_T3_p2.setAttribute('src', SourseBG_3_p2);
             //FrontSide (part3):
             ReplaceImg_T3_p3 = document.createElement('img');
             ReplaceImg_T3_p3.setAttribute('id', 'BoxCoverFront');
             ReplaceImg_T2_p2.setAttribute('class', 'BoxCoverBackDodecaedr');
-            ReplaceImg_T3_p3.setAttribute('style', 'z-index: 90005; opacity: 0.25; position: absolute; width: 60%; max-height:90%; left: 20%; right: auto; top: 50px;');
+            ReplaceImg_T3_p3.setAttribute('style', 'z-index: 90005; opacity: 0.75; position: absolute; width: 60%; max-height:90%; left: 20%; right: auto; top: 50px;');
             ReplaceImg_T3_p3.setAttribute('src', SourseBG_3_p3);
             // ReplaceImg_T1_p3.setAttribute('ondragenter', 'animateFunction_ALL()');
 
@@ -1226,7 +1228,7 @@ function Delete_MainItemBG(){
              //floor content image (hidden by default):
             PrepareExtraContent_forCube.setAttribute("id", "WaterFloorContent_forCube");
             PrepareExtraContent_forCube.setAttribute("src", "img/aquacube_middle_Image_Extra_content_Type1.png");
-            PrepareExtraContent_forCube.setAttribute("style", "display: none; z-index: 35005; opacity: 1; position: absolute;"); // for cube - type1
+            PrepareExtraContent_forCube.setAttribute("style", "z-index: 35005; opacity: 1; position: absolute;"); // for cube - type1
             PrepareExtraContent_forCube.setAttribute("class", "d-none"); //default
 
 
