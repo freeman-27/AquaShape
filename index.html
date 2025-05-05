@@ -40,11 +40,56 @@
             }
         } */
     </style>
+    <style>
+#ProgressBarContainer {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#progressBar_1 {
+  width: 1%;
+  height: 10px;
+  background-color: #78aa04;
+}
+</style>
+    <script>
+        // setTimeout(ShowLoadProgress, 5000);
+        // setTimeout(() => {
+        //     ShowLoadProgress()
+        // }, timeout);
+
+    var i = 0;
+    function ShowLoadProgress() {
+    if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("progressBar_1");
+        var width = 1;
+        var id = setInterval(frame, 10);
+        function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+            i = 0;
+            ShowApplication();
+        } else {
+            width++;
+            elem.style.width = width + "%";
+        }
+        }
+    }
+    }
+    function ShowApplication(){
+        document.getElementById("wrapper").classList.remove("d-none");
+        document.getElementById("ProgressBarContainer").classList.add("d-none");
+    }
+    </script>
 
 </head>
-<body id="bodyItem" class="bg-dark" onload ="Connect_CSS_and_mob();" style="background-image: url('img/CustomBackground/forBlurBackground_sized_Aqua.png');" > <!-- onresize="CheckWindowSize()" style=""-->
-    <div id="warning-message" class="container-fluid text-center" style="z-index: -3; position: absolute;"><p class="mt-5 fs-5 text-light">This App is avaliable only in portrait viewscreen. <br> Please rotate your device</p><div><img class="p-3" src="img/RotateDeviceImg_White.png" alt="RotateDeviceImg.png"></div></div>
-    <main id="wrapper">
+<body id="bodyItem" class="bg-dark" onload ="Connect_CSS_and_mob(); setTimeout(ShowLoadProgress(), 5000);" style="background-image: url('img/CustomBackground/forBlurBackground_sized_Aqua.png');" > <!-- onresize="CheckWindowSize()" style=""-->
+    <div id="ProgressBarContainer" class="w-50 border border-1 border-black rounded-4" style="position: absolute; z-index: 155505; left: 25%; top: clamp(200px, 100vw, 500px);">
+    <div id="progressBar_1" class="border-1 border-black rounded-4 greenShadowBorder"></div>
+    </div>
+    <div id="warning-message" class="d-md-none container-fluid text-center" style="z-index: -3; position: absolute;"><p class="mt-5 fs-5 text-light">This App is avaliable only in portrait viewscreen. <br> Please rotate your device</p><div><img class="p-3" src="img/RotateDeviceImg_White.png" alt="RotateDeviceImg.png"></div></div>
+    <main id="wrapper" class="d-none">
         <canvas id="MainBGitem" class="" style="border: 2px solid red ; z-index: -2; position: absolute; background: url('img/CustomBackground/forBlurBackground_sized_Cobalt.png'); background-size: 65%, 80%; background-position-x: 50%; background-position-y: 5em; background-repeat: no-repeat; opacity: 0.5; width: 98%; height: 98%;"></canvas>
 
         <div class="container-fuild text-center" style="z-index: 250005 !important;">
