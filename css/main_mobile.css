@@ -9,7 +9,7 @@
         display: none !important;
     }
 
-    #BoxBackConteiner{
+    #BoxBackContainer{
         position: absolute;
         left: 2% !important;
         right: 2% !important;
@@ -66,7 +66,7 @@
         position: absolute;
         width: 80px !important;
         block-size: 80px !important;
-        top: 3em !important;
+        top: 4.25em !important;
         /* bottom: 210px !important; */
         /* bottom: 42em !important; */
         right: 15% !important;

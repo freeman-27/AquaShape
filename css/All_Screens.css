@@ -30,3 +30,12 @@
     backdrop-filter: blur(10px);
     
 }
+
+
+.TransparentTextMask_H1 { /*class for image elements*/
+    -webkit-mask-image: url('img/CustomBackground/AquaShapeHeaderText_noBackground.png');
+    mask-image: url('img/CustomBackground/AquaShapeHeaderText_noBackground.png');
+    mask-repeat: no-repeat;
+    border: 2px solid red;
+    height: 75px !important;
+  }
