@@ -22,9 +22,29 @@
 
     <link rel="icon" href="img/aquacube_content_image_r2.ico" type="image/x-icon"/>
 
+    <style type="text/css">
+        /* #warning-message{ 
+          display: none; 
+        }
+        @media only screen and (orientation:portrait){
+            #warning-message{
+              display:none; 
+            }
+        }
+        @media only screen and (orientation:landscape){
+          #wrapper { 
+              display:none; 
+            }
+            #warning-message { 
+              display:block; 
+            }
+        } */
+    </style>
+
 </head>
 <body id="bodyItem" class="bg-dark" onload ="Connect_CSS_and_mob();" style="background-image: url('img/CustomBackground/forBlurBackground_sized_Aqua.png');" > <!-- onresize="CheckWindowSize()" style=""-->
-    <main>
+    <div id="warning-message" class="container-fluid text-center" style="z-index: -3; position: absolute;"><p class="mt-5 fs-5 text-light">This App is avaliable only in portrait viewscreen. <br> Please rotate your device</p><div><img class="p-3" src="img/RotateDeviceImg_White.png" alt="RotateDeviceImg.png"></div></div>
+    <main id="wrapper">
         <canvas id="MainBGitem" class="" style="border: 2px solid red ; z-index: -2; position: absolute; background: url('img/CustomBackground/forBlurBackground_sized_Cobalt.png'); background-size: 65%, 80%; background-position-x: 50%; background-position-y: 5em; background-repeat: no-repeat; opacity: 0.5; width: 98%; height: 98%;"></canvas>
 
         <div class="container-fuild text-center" style="z-index: 250005 !important;">
