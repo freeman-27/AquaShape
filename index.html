@@ -84,7 +84,7 @@
     </script>
 
 </head>
-<body id="bodyItem" class="bg-dark" onload ="Connect_CSS_and_mob(); setTimeout(ShowLoadProgress(), 5000);" style="background-image: url('img/CustomBackground/forBlurBackground_sized_Aqua.png');" > <!-- onresize="CheckWindowSize()" style=""-->
+<body id="bodyItem" class="bg-dark" onload ="Connect_CSS_and_mob(); setTimeout(ShowLoadProgress(), 5000);" style="background-image: url('img/CustomBackground/forBlurBackground_sized_Aqua.png'); overflow: hidden" > <!-- onresize="CheckWindowSize()" style=""-->
     <div id="ProgressBarContainer" class="w-50 border border-1 border-black rounded-4" style="position: absolute; z-index: 155505; left: 25%; top: clamp(200px, 100vw, 500px);">
     <div id="progressBar_1" class="border-1 border-black rounded-4 greenShadowBorder"></div>
     </div>
@@ -105,7 +105,7 @@
             <div id="MobileMenuBlock" class="" style="position: absolute; z-index: 120005 !important; left: 2em; top: 3.5em;">
                 <div id="stickyMenuClosed" class="ms-3 d-block d-md-none">  
                     <div id="stickyOpenStickyMenuButton" onscroll="stickyPositionFastLinks()">
-                        <button class="rounded-circle btn text-light border-4 border-white bg-dark" style="height: 80px; width: 80px; background-image: url('img/aquacube_content_image_r2.ico') !important; background-size: cover !important;" onclick="openStickyMenu()" data-bs-toggle="tooltip" data-bs-placement="right" title="Открыть меню">
+                        <button class="rounded-circle btn text-light border-1 border-white bg-dark" style="height: 80px; width: 80px; background-image: url('img/aquacube_content_image_r2.ico') !important; background-size: cover !important;" onclick="openStickyMenu()" data-bs-toggle="tooltip" data-bs-placement="right" title="Открыть меню">
                             <!-- Sticky Menu CLOSED-->  
                         </button>
                     </div>
@@ -115,7 +115,7 @@
                         <a class="text-decoration-none text-light" role="button" href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="">
                             <!-- funcBtn0 change Bottom background -->
                                 <div id="funcBtn0" 
-                                    class="d-block d-md-none btn btn-primary bg-primary text-black border-4 border rounded-circle" role="button" href="https://wmit.online" 
+                                    class="d-block d-md-none btn btn-primary bg-primary text-black border-1 border rounded-circle" role="button" href="https://wmit.online" 
                                     style="text-align: center !important; font-size: 25px; position: absolute; top: 0em; left: 5em; 
                                     width: 50px; block-size: 50px; background: url('img/switch_form_btn.png'); 
                                     background-size: 75%, 75% !important; background-repeat: no-repeat; background-position-x: 5px; background-position-y: 5px;">
@@ -126,7 +126,7 @@
                         <a class="text-decoration-none text-light" role="button" href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="">
                             <!-- funcBtn1 change middle background  -->
                                 <div id="funcBtn1" 
-                                        class="d-block d-md-none btn btn-primary bg-success text-black border-4 border rounded-circle" role="button" href="https://wmit.online"
+                                        class="d-block d-md-none btn btn-primary bg-success text-black border-1 border rounded-circle" role="button" href="https://wmit.online"
                                         style="text-align: center !important; font-size: 25px; position: absolute; top: 2.25em; left: 4.5em; 
                                         width: 50px; block-size: 50px; background: url('img/DecaedrShape_MiddleImage_WithContent_whiteBG.png'); background-size: 45px, 45px; background-repeat: no-repeat; background-position-x: center;background-position-y: center;"><span class="d-none">FloorContent</span>
                                 </div>
@@ -136,14 +136,14 @@
                         <a class="text-decoration-none text-light" role="button" href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="">
                             <!-- funcBtn2 change light color -->
                                 <div id="change_ColorLightID_Mobile_Btn" 
-                                        class="d-block d-md-none btn btn-primary bg-dark text-black border-4 border rounded-circle" role="button" href="https://wmit.online"
+                                        class="d-block d-md-none btn btn-primary bg-dark text-black border-1 border rounded-circle" role="button" href="https://wmit.online"
                                         style="text-align: center !important; font-size: 25px; position: absolute; top: 3.75em; left: 3em; 
                                         width: 50px; block-size: 50px; background: url('img/TypeColorForLightSource.png'); background-size: cover, cover;"><span class="d-none">Color of light</span>
                                 </div>
                         </a>
                     </div>
                     <div id="stickyCloseStickyMenuButton" onscroll="stickyPositionFastLinks()" 
-                        class="d-flex align-items-center justify-content-center rounded-circle btn bg-danger d-block align-items-center mx-auto py-0 px-0 fw-bold border-4 border-white text-light bg-danger" 
+                        class="d-flex align-items-center justify-content-center rounded-circle btn bg-danger d-block align-items-center mx-auto py-0 px-0 fw-bold border-1 border-white text-light bg-danger" 
                         style="height: 3em; width: 3em; transition-duration: 1s; position: absolute; top: 6.5em; left: 1em; width: 50px; block-size: 50px;">
                         <a class="text-decoration-none text-light" role="button" href="#" onclick="HideStickyMenu()" data-bs-toggle="tooltip" data-bs-placement="right" title="Закрыть меню">
                                 X
@@ -211,13 +211,14 @@
                     <button id="clear_items_Mobile" class="btnItmem mb-5 btn btn-warning border-1 border-light" width="50px" alt="" onclick="RemoveItems()">Clear items</button>
                 </div>
             </div>
-            <button id="AddSmItemBtn_Mobile" class="btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Add_ItemSmall_Random_Mobile()" style="z-index: 12005; width: 100px; height: 100px; text-shadow: 0 0 10px yellowgreen, 0 0 20px white; background-image: url('img/RandomFishesCircle.png'); background-size: cover; background-repeat: no-repeat;"><span class="fs-4">+1</span><br><span class="d-none">random</span></button>
-            <button id="Collapse_MobilePanel_Btn" class="d-md-none btnItmem mb-1 btn btn-danger rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="Collapse_MobilePanel()" type="button" data-bs-toggle="collapse" data-bs-target="#_none_Items_Panel_Mobile" aria-expanded="false" aria-controls="Items_Panel_Mobile" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span>X</span></button>
-            <button id="UnCollapse_MobilePanel_Btn" class="d-none d-md-none btnItmem mb-1 btn btn-success rounded-circle border-4 border-light text-light fw-bold" alt="" onclick="UnCollapse_MobilePanel()" type="button" data-bs-toggle="collapse" data-bs-target="#_none_Items_Panel_Mobile" aria-expanded="true" aria-controls="Items_Panel_Mobile" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span>^</span></button>
-            <button id="HomePage_Btn" class="d-md-none btnItmem mb-1 btn btn-primary border-4 border-light text-light fw-bold" alt="" onclick="HomePage()" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span></span></button>
-
+            <button id="AddSmItemBtn_Mobile" class="btnItmem mb-1 btn btn-success rounded-circle border-1 border-light text-light fw-bold" alt="" onclick="Add_ItemSmall_Random_Mobile()" style="z-index: 12005; width: 100px; height: 100px; text-shadow: 0 0 10px yellowgreen, 0 0 20px white; background-image: url('img/RandomFishesCircle.png'); background-size: cover; background-repeat: no-repeat;"><span class="fs-4 bg-dark rounded-circle">+1</span><br><span class="d-none">random</span></button>
+            <button id="Collapse_MobilePanel_Btn" class="d-md-none btnItmem mb-1 btn btn-danger rounded-circle border-1 border-light text-light fw-bold" alt="" onclick="Collapse_MobilePanel()" type="button" data-bs-toggle="collapse" data-bs-target="#_none_Items_Panel_Mobile" aria-expanded="false" aria-controls="Items_Panel_Mobile" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span>X</span></button>
+            <button id="UnCollapse_MobilePanel_Btn" class="d-none d-md-none btnItmem mb-1 btn btn-success rounded-circle border-1 border-light text-light fw-bold" alt="" onclick="UnCollapse_MobilePanel()" type="button" data-bs-toggle="collapse" data-bs-target="#_none_Items_Panel_Mobile" aria-expanded="true" aria-controls="Items_Panel_Mobile" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span class="fs-2">^</span></button>
+            <!-- <button id="Func_Btn_1" class="d-md-none btnItmem mb-1 btn btn-success border-1 border-light text-light fw-bold" alt="" onclick="" style="z-index: 220005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span>F</span></button>     -->
+            <!-- <button id="HomePage_Btn" class="d-none d-md-none btnItmem mb-1 btn btn-primary border-1 border-light text-light fw-bold" alt="" onclick="HomePage()" style="z-index: 120005; width: 50px !important; height: 50px !important; text-shadow: 0 0 10px yellowgreen, 0 0 20px white;"><span>H</span></button> -->
+            <button id="HomePage_Btn" class="d-none d-md-none btn bg-transparent text-light w-25 border text-center px-0" onclick="HomePage()" style="position: absolute; left:20px; bottom: 15px !important; z-index: 555005;">wmit.online</button>
         </div>
-        <div></div>
+        
         <audio id="bubbles_sound" src="audio/underwater_sound_5.3gpp" type="audio/3gpp" loop></audio>
     </main>
     
@@ -291,7 +292,8 @@
         // document.getElementById("Items_Panel_Mobile").classList.add("collapse");
         document.getElementById("Items_Panel_Mobile").removeAttribute("style"); 
         document.getElementById("Items_Panel_Mobile").classList.add("d-none"); 
-        document.getElementById("HomePage_Btn").classList.add("d-none"); 
+        // document.getElementById("Func_Btn_1").classList.add("d-none"); 
+        document.getElementById("HomePage_Btn").classList.remove("d-none"); 
         document.getElementById("Collapse_MobilePanel_Btn").classList.add("d-none"); 
         document.getElementById("UnCollapse_MobilePanel_Btn").classList.remove("d-none"); 
         // document.getElementById("UnCollapse_MobilePanel_Btn").setAttributeNodeNS("style", "display: block"); 
@@ -304,7 +306,8 @@
         if (MobMenuStateID == 1){
         document.getElementById("Items_Panel_Mobile").setAttribute("style", "z-index: 120005; width: fit-content; block-size: 200px; position: absolute; right: 0; bottom:0;");
         document.getElementById("Items_Panel_Mobile").classList.remove("d-none"); 
-        document.getElementById("HomePage_Btn").classList.remove("d-none"); 
+        // document.getElementById("Func_Btn_1").classList.remove("d-none"); 
+        document.getElementById("HomePage_Btn").classList.add("d-none"); 
         document.getElementById("Collapse_MobilePanel_Btn").classList.remove("d-none"); 
         document.getElementById("UnCollapse_MobilePanel_Btn").classList.add("d-none"); 
         // document.getElementById("UnCollapse_MobilePanel_Btn").setAttributeNodeNS("style", "display: none"); 

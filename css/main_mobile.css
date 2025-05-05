@@ -102,6 +102,11 @@
     #HomePage_Btn{
         left: 10% !important;
     }
+    /* #Func_Btn_1{ For New FunctionButtons
+        left: 10% !important;
+        bottom: 250px !important;
+        display: block !important;
+    } */
     #UnCollapse_MobilePanel_Btn{
         right: 14% !important;
         bottom: 1% !important;
