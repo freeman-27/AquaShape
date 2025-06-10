@@ -1,1 +1,1 @@
-# AcuaCube_3D
+# AcuaShape web project
