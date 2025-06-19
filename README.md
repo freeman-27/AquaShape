@@ -1,7 +1,7 @@
 # AcuaShape web project
 
 ## Description
-Simple app with 2d animation of fishbowl (desktop).
+Simple app with 2d animation of fishbowl (desktop).<br>
 Development mobile version.
 
 ### app link:
