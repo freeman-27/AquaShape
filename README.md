@@ -8,5 +8,5 @@ Development mobile version.
 https://wmit.online/_Projects/AquaCubeApp/AquaShape_AppStartPage.html
 
 ### preview:
-![app preview](wmit.online/_Projects/AquaCubeApp/AquaCubeWeb_Proto/img/AppPreview/AquaShape_Web_1.0.png)
+![app preview](https://wmit.online/_Projects/AquaCubeApp/AquaCubeWeb_Proto/img/AppPreview/AquaShape_Web_1.0.png)
 
